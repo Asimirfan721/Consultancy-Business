@@ -12,6 +12,8 @@ Route::get('/scholarships', [ScholarshipController::class, 'index'])->name('scho
 Route::get('/services', [PageController::class, 'services'])->name('services');
 Route::get('/documents', [PageController::class, 'documents'])->name('documents');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
+Route::get('/contact', [PageController::class, 'show'])->name('contact');
+Route::post('/contact-submit', [PageController::class, 'submit'])->name('contact.submit');
 Route::get('/reviews', [PageController::class, 'reviews'])->name('reviews');
 
 // Admin Routes for adding Scholarships
