@@ -6,7 +6,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .custom-header-bg {
-            background: #F3FFE3;
+            background: #fff; /* Pure white */
         }
         .custom-btn {
             background: linear-gradient(90deg, #fbc2eb 0%, #a6c1ee 100%);
@@ -28,9 +28,9 @@
 
     <!-- HEADER/Navbar -->
     <nav class="custom-header-bg shadow-lg">
-        <div class="container mx-auto px-4 py-10 flex justify-between items-center">
-            <div class="text-4xl font-extrabold brand-gradient drop-shadow-lg tracking-wide select-none">
-                Tech<span class="text-blue-700 drop-shadow-md">Consultancy</span>
+        <div class="container mx-auto px-4 h-20 flex justify-between items-center">
+            <div class="select-none">
+                <img src="{{ asset('images/Tech Consultancy.jpg') }}" alt="TechConsultancy Logo" class="h-32 w-auto object-contain">
             </div>
             <ul class="flex space-x-4">
                 <li>
