@@ -1,53 +1,63 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="bg-white/90 p-8 rounded-2xl shadow-xl border border-pink-100">
-    <!-- About Us Section -->
-    <h1 class="text-4xl font-extrabold bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent drop-shadow mb-4">
-        Welcome to <span class="bg-gradient-to-r from-yellow-200 via-pink-300 to-purple-300 bg-clip-text text-transparent">TechConsultancy</span>
+<!-- Hero Section -->
+<section class="p-10 rounded-2xl shadow-xl border border-green-200 bg-gradient-to-br from-green-50 to-white">
+    <!-- Heading -->
+    <h1 class="text-4xl md:text-5xl font-extrabold text-gray-800 leading-tight mb-6">
+        Welcome to <span class="bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-500 bg-clip-text text-transparent">TechConsultancy</span>
     </h1>
-    <p class="text-gray-700 mb-8 text-lg">
-        We guide students to achieve their dreams of studying abroad. From selecting the right university to preparing your visa file, we assist at every step of the journey.
+
+    <!-- Description -->
+    <p class="text-gray-700 text-lg md:text-xl max-w-3xl mb-8">
+        Your trusted partner in fulfilling study-abroad dreams. We assist you every step of the way — from selecting universities to building your visa file.
     </p>
 
-    <!-- Social Icons -->
-    <div class="flex space-x-6 mb-8">
-        <a href="https://facebook.com" target="_blank" class="text-blue-600 hover:text-white hover:bg-blue-600 px-3 py-1 rounded-full transition font-semibold shadow">
-            Facebook
+    <!-- Social Media Icons -->
+    <div class="flex flex-wrap gap-4 mb-8">
+        <a href="https://facebook.com" target="_blank"
+           class="flex items-center gap-2 bg-blue-100 text-blue-600 px-4 py-2 rounded-full hover:bg-blue-600 hover:text-white transition shadow-sm">
+            <i class="fab fa-facebook-f"></i> Facebook
         </a>
-        <a href="https://instagram.com" target="_blank" class="text-pink-500 hover:text-white hover:bg-pink-500 px-3 py-1 rounded-full transition font-semibold shadow">
-            Instagram
+        <a href="https://instagram.com" target="_blank"
+           class="flex items-center gap-2 bg-pink-100 text-pink-600 px-4 py-2 rounded-full hover:bg-pink-600 hover:text-white transition shadow-sm">
+            <i class="fab fa-instagram"></i> Instagram
         </a>
-        <a href="https://linkedin.com" target="_blank" class="text-purple-700 hover:text-white hover:bg-purple-700 px-3 py-1 rounded-full transition font-semibold shadow">
-            LinkedIn
+        <a href="https://linkedin.com" target="_blank"
+           class="flex items-center gap-2 bg-purple-100 text-purple-700 px-4 py-2 rounded-full hover:bg-purple-700 hover:text-white transition shadow-sm">
+            <i class="fab fa-linkedin-in"></i> LinkedIn
         </a>
     </div>
 
     <!-- Explore Button -->
     <a href="#countries"
-       class="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 text-white font-bold shadow-lg hover:from-blue-400 hover:to-pink-400 transition-all duration-200">
-        Explore
+       class="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 text-white font-semibold shadow-md hover:opacity-90 transition-all duration-200">
+        Explore Countries
     </a>
-</div>
+</section>
 
-<!-- Country Highlights Section -->
-<div id="countries" class="mt-12">
-    <h2 class="text-3xl font-extrabold mb-6 bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent drop-shadow">
-        Popular Countries
+<!-- Popular Countries Section -->
+<section id="countries" class="mt-16">
+    <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">
+        Popular Countries We Guide For
     </h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <div class="bg-white/90 p-6 rounded-xl shadow-lg border-t-4 border-pink-400 hover:scale-105 transition">
-            <h3 class="text-xl font-bold text-pink-500 mb-2">Canada</h3>
-            <p class="text-gray-600 text-base">Top universities, PR pathways, and quality education.</p>
+
+    <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <!-- Country Card -->
+        <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-pink-500 hover:scale-105 transition">
+            <h3 class="text-xl font-semibold text-pink-600 mb-2">Canada</h3>
+            <p class="text-gray-600">Top universities, PR pathways, and quality education.</p>
         </div>
-        <div class="bg-white/90 p-6 rounded-xl shadow-lg border-t-4 border-purple-400 hover:scale-105 transition">
-            <h3 class="text-xl font-bold text-purple-500 mb-2">Germany</h3>
-            <p class="text-gray-600 text-base">Zero tuition fee in public universities and great research opportunities.</p>
+
+        <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-purple-500 hover:scale-105 transition">
+            <h3 class="text-xl font-semibold text-purple-600 mb-2">Germany</h3>
+            <p class="text-gray-600">Zero tuition fee in public universities and great research opportunities.</p>
         </div>
-        <div class="bg-white/90 p-6 rounded-xl shadow-lg border-t-4 border-blue-400 hover:scale-105 transition">
-            <h3 class="text-xl font-bold text-blue-500 mb-2">Australia</h3>
-            <p class="text-gray-600 text-base">Excellent lifestyle, universities, and part-time work options.</p>
+
+        <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-blue-500 hover:scale-105 transition">
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">Australia</h3>
+            <p class="text-gray-600">Excellent lifestyle, top universities, and work opportunities.</p>
         </div>
     </div>
-</div>
+</section>
 @endsection

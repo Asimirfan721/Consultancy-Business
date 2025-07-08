@@ -3,50 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <title>Student Consultancy</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .custom-header-bg {
+            background: #F3FFE3;
+        }
+        .custom-btn {
+            background: linear-gradient(90deg, #fbc2eb 0%, #a6c1ee 100%);
+            color: #3b0692;
+        }
+        .custom-btn:hover {
+            background: linear-gradient(90deg, #a6c1ee 0%, #fbc2eb 100%);
+            color: #fff;
+        }
+        .brand-gradient {
+            background: linear-gradient(90deg, #6366f1 0%, #a21caf 50%, #f472b6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
 </head>
 <body class="bg-gray-100">
 
     <!-- HEADER/Navbar -->
-    <nav class="bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 shadow-lg">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="text-3xl font-extrabold bg-gradient-to-r from-white via-yellow-200 to-pink-300 bg-clip-text text-transparent drop-shadow-lg tracking-wide select-none">
-                Tech<span class="text-white drop-shadow-md">Consultancy</span>
+    <nav class="custom-header-bg shadow-lg">
+        <div class="container mx-auto px-4 py-10 flex justify-between items-center">
+            <div class="text-4xl font-extrabold brand-gradient drop-shadow-lg tracking-wide select-none">
+                Tech<span class="text-blue-700 drop-shadow-md">Consultancy</span>
             </div>
             <ul class="flex space-x-4">
                 <li>
                     <a href="{{ route('home') }}"
-                       class="px-4 py-2 rounded-full bg-white/80 text-pink-600 font-semibold shadow hover:bg-pink-500 hover:text-white transition-all duration-200">
+                       class="px-5 py-2 rounded-full custom-btn font-semibold shadow transition-all duration-200">
                         Home
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('scholarships') }}"
-                       class="px-4 py-2 rounded-full bg-white/80 text-purple-600 font-bold shadow hover:bg-purple-500 hover:text-white transition-all duration-200">
+                       class="px-5 py-2 rounded-full custom-btn font-bold shadow transition-all duration-200">
                         Scholarships
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('services') }}"
-                       class="px-4 py-2 rounded-full bg-white/80 text-blue-600 font-semibold shadow hover:bg-blue-500 hover:text-white transition-all duration-200">
+                       class="px-5 py-2 rounded-full custom-btn font-semibold shadow transition-all duration-200">
                         Service Plans
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('documents') }}"
-                       class="px-4 py-2 rounded-full bg-white/80 text-pink-600 font-semibold shadow hover:bg-pink-500 hover:text-white transition-all duration-200">
+                       class="px-5 py-2 rounded-full custom-btn font-semibold shadow transition-all duration-200">
                         Mandatory Documents
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('contact') }}"
-                       class="px-4 py-2 rounded-full bg-white/80 text-purple-600 font-semibold shadow hover:bg-purple-500 hover:text-white transition-all duration-200">
+                       class="px-5 py-2 rounded-full custom-btn font-semibold shadow transition-all duration-200">
                         Contact Us
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('reviews') }}"
-                       class="px-4 py-2 rounded-full bg-white/80 text-blue-600 font-semibold shadow hover:bg-blue-500 hover:text-white transition-all duration-200">
+                       class="px-5 py-2 rounded-full custom-btn font-semibold shadow transition-all duration-200">
                         Reviews
                     </a>
                 </li>
