@@ -1,22 +1,26 @@
-<!-- filepath: resources/views/components/footer.blade.php -->
-<footer class="bg-[#f8fafc] border-t border-gray-200 pt-8 pb-2 mt-16">
+<!-- filepath: resources/views/layouts/footer.blade.php -->
+<footer class="bg-[#f8fafc] border-t border-gray-200 pt-10 pb-4 mt-16">
     <div class="max-w-7xl mx-auto px-4">
-        <div class="flex flex-col md:flex-row md:justify-between gap-8">
-            <!-- Left: Logo & About -->
+        <div class="flex flex-col md:flex-row md:justify-between gap-10">
+            <!-- Logo & About -->
             <div class="flex-1 min-w-[220px]">
                 <div class="flex items-center gap-2 mb-2">
                     <img src="/images/times-logo.png" alt="Times Consultant" class="h-10 w-auto" />
-                    <span class="text-xl font-bold text-red-700">TIMES CONSULTANT</span>
-                    <span class="ml-2 text-sm font-bold text-red-700">21 YEARS OF SHAPING CAREERS</span>
+                    <div>
+                        <div class="text-xl font-bold text-red-700 leading-tight">TIMES CONSULTANT</div>
+                        <div class="text-xs font-bold text-red-700">21 YEARS OF SHAPING CAREERS</div>
+                    </div>
                 </div>
-                <p class="text-black text-sm mt-2">
-                    Official Representatives of 500+ Universities & Colleges Worldwide. As your trusted study abroad advisor! Times Consultant was established in 2004 in Karachi, Pakistan
+                <p class="text-black text-sm mt-2 leading-relaxed">
+                    Official Representatives of 500+ Universities & Colleges Worldwide.<br>
+                    As your trusted study abroad advisor!<br>
+                    Times Consultant was established in 2004 in Karachi, Pakistan.
                 </p>
             </div>
 
             <!-- Quick Links -->
             <div class="flex-1 min-w-[180px]">
-                <h3 class="font-bold text-lg text-black mb-2">Quick Link</h3>
+                <h3 class="font-bold text-lg text-black mb-2">Quick Links</h3>
                 <ul class="space-y-1 text-black">
                     <li><a href="{{ url('/about') }}" class="hover:underline flex items-center gap-2"><span>&rsaquo;</span> About us</a></li>
                     <li><a href="{{ url('/locations') }}" class="hover:underline flex items-center gap-2"><span>&rsaquo;</span> Locations</a></li>
@@ -52,7 +56,7 @@
 
             <!-- Contact Us -->
             <div class="flex-1 min-w-[180px]">
-                <h3 class="font-bold text-lg text-black mb-2">Contact us</h3>
+                <h3 class="font-bold text-lg text-black mb-2">Contact Us</h3>
                 <ul class="space-y-3">
                     <li class="flex items-center gap-2">
                         <span class="inline-flex items-center justify-center w-8 h-8 rounded bg-white border border-gray-300 text-red-600">
