@@ -27,11 +27,11 @@
 <body class="bg-gray-100">
 
     <!-- HEADER/Navbar -->
-    <nav class="custom-header-bg shadow-lg">
-        <div class="container mx-auto px-4 h-20 flex justify-between items-center">
-            <div class="select-none">
-                <img src="{{ asset('images/Tech Consultancy.jpg') }}" alt="TechConsultancy Logo" class="h-32 w-auto object-contain">
-            </div>
+   <nav class="custom-header-bg shadow-lg">
+    <div class="container mx-auto px-4 h-24 flex justify-between items-center">
+        <div class="select-none">
+            <img src="{{ asset('images/Tech Consultancy.jpg') }}" alt="TechConsultancy Logo"
+                 class="h-16 md:h-20 w-auto object-contain transition-all duration-300">  </div>
             <ul class="flex space-x-4">
                 <li>
                     <a href="{{ route('home') }}"
@@ -60,15 +60,15 @@
                 <li>
                     <a href="{{ route('contact') }}"
                        class="px-5 py-2 rounded-full custom-btn font-semibold shadow transition-all duration-200">
-                        Contact Us
+                        Contact Us & Reviews
                     </a>
                 </li>
-                <li>
+                {{-- <li>
                     <a href="{{ route('reviews') }}"
                        class="px-5 py-2 rounded-full custom-btn font-semibold shadow transition-all duration-200">
                         Reviews
                     </a>
-                </li>
+                </li> --}}
             </ul>
         </div>
     </nav>
