@@ -22,19 +22,108 @@
     @if(session('success'))
         <div class="bg-green-100 text-green-700 p-4 mb-6 rounded">{{ session('success') }}</div>
     @endif
+<form action="{{ route('contact.submit') }}" method="POST"
+      class="max-w-2xl mx-auto space-y-5 bg-white p-8 rounded-2xl shadow-xl border border-blue-100 mt-10">
+    @csrf
+    <h2 class="text-2xl font-bold text-blue-800 mb-6 text-center">📬 Contact Us</h2>
 
-    <form action="{{ route('contact.submit') }}" method="POST" class="space-y-4 bg-white p-6 rounded shadow-md">
-        @csrf
-        <input type="text" name="name" placeholder="Your Name" required class="w-full p-2 border rounded">
-        <input type="text" name="city" placeholder="Your City" required class="w-full p-2 border rounded">
-        <input type="text" name="phone" placeholder="Your Phone Number" required class="w-full p-2 border rounded">
-        <input type="email" name="email" placeholder="Your Email" required class="w-full p-2 border rounded">
-        <input type="text" name="destination" placeholder="Where do you want to apply?" required class="w-full p-2 border rounded">
-        <input type="text" name="qualification" placeholder="Your Qualification" required class="w-full p-2 border rounded">
-        <input type="text" name="degree_level" placeholder="Degree Level (e.g. Bachelor, Master, PhD)" required class="w-full p-2 border rounded">
-        <input type="text" name="university" placeholder="Desired University" required class="w-full p-2 border rounded">
-        <textarea name="programs" placeholder="Write at least 3 programs of your choice" rows="4" required class="w-full p-2 border rounded"></textarea>
-        <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Submit</button>
-    </form>
+    <!-- Name -->
+    <div>
+        <label class="block mb-1 text-gray-700 font-medium">Your Name</label>
+        <input type="text" name="name" required
+               class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 transition">
+    </div>
+
+    <!-- City -->
+    <div>
+        <label class="block mb-1 text-gray-700 font-medium">Your City</label>
+        <input type="text" name="city" required
+               class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 transition">
+    </div>
+
+    <!-- Phone -->
+    <div>
+        <label class="block mb-1 text-gray-700 font-medium">Phone Number</label>
+        <input type="text" name="phone" required
+               class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 transition">
+    </div>
+
+    <!-- Email -->
+    <div>
+        <label class="block mb-1 text-gray-700 font-medium">Email Address</label>
+        <input type="email" name="email" required
+               class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 transition">
+    </div>
+
+    <!-- Destination -->
+    <div>
+        <label class="block mb-1 text-gray-700 font-medium">Where do you want to apply?</label>
+        <input type="text" name="destination" required
+               class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 transition">
+    </div>
+
+    <!-- Qualification -->
+    <div>
+        <label class="block mb-1 text-gray-700 font-medium">Your Qualification</label>
+        <input type="text" name="qualification" required
+               class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 transition">
+    </div>
+
+    <!-- Degree Level -->
+    <div>
+        <label class="block mb-1 text-gray-700 font-medium">Degree Level (e.g. Bachelor, Master, PhD)</label>
+        <input type="text" name="degree_level" required
+               class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 transition">
+    </div>
+
+    <!-- University -->
+    <div>
+        <label class="block mb-1 text-gray-700 font-medium">Desired University</label>
+        <input type="text" name="university" required
+               class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 transition">
+    </div>
+
+    <!-- Programs -->
+    <div>
+        <label class="block mb-1 text-gray-700 font-medium">Write at least 3 programs of your choice</label>
+        <textarea name="programs" rows="4" required
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 transition resize-none"></textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="text-center">
+        <button type="submit"
+                class="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 rounded-full shadow-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-300 font-semibold tracking-wide">
+            Submit Now
+        </button>
+    </div>
+</form>
+
+    <!-- User Reviews Section -->
+    <div class="mt-12">
+        <h3 class="text-2xl font-bold mb-6 text-center text-purple-700">What Our Clients Say</h3>
+        <div class="flex flex-col md:flex-row gap-8 justify-center items-stretch">
+            <!-- Review 1 -->
+            <div class="flex-1 bg-white rounded-2xl shadow-lg p-6 transition-transform duration-300 hover:scale-105 hover:shadow-2xl border-t-4 border-blue-200">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="text-lg font-semibold text-blue-700">Ayesha Khan</span>
+                    <span class="text-sm text-gray-400">★ ★ ★ ★ ★</span>
+                </div>
+                <p class="text-gray-700 italic">
+                    "Their service is awesome! The team is truly expert in the field and guided me at every step. Highly recommended for anyone dreaming to study abroad."
+                </p>
+            </div>
+            <!-- Review 2 -->
+            <div class="flex-1 bg-white rounded-2xl shadow-lg p-6 transition-transform duration-300 hover:scale-105 hover:shadow-2xl border-t-4 border-pink-200">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="text-lg font-semibold text-pink-700">Ali Raza</span>
+                    <span class="text-sm text-gray-400">★ ★ ★ ★ ★</span>
+                </div>
+                <p class="text-gray-700 italic">
+                    "I am so happy with TechConsultancy! They are very good at what they do and made my application process smooth and stress-free. Thank you for your dedication!"
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
 @endsection
