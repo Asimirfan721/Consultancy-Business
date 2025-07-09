@@ -60,4 +60,89 @@
         </div>
     </div>
 </section>
+
+<!-- FAQ Section -->
+<section class="max-w-4xl mx-auto mt-16">
+    <h2 class="text-3xl font-bold mb-8 text-center text-gray-800">Frequently asked questions</h2>
+    <div x-data="{ open: 1 }" class="space-y-4">
+
+        <!-- FAQ 1 -->
+        <div class="bg-gray-50 rounded-lg shadow">
+            <button @click="open === 1 ? open = null : open = 1"
+                class="w-full flex justify-between items-center px-6 py-4 text-left focus:outline-none">
+                <span class="text-lg font-semibold text-gray-900">1. What services does TechConsultancy offer?</span>
+                <span>
+                    <svg x-show="open !== 1" class="w-6 h-6 text-red-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v8m-4-4h8" /></svg>
+                    <svg x-show="open === 1" class="w-6 h-6 text-red-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h8" /></svg>
+                </span>
+            </button>
+            <div x-show="open === 1" class="px-6 pb-4 text-gray-700">
+                TechConsultancy provides a range of services including university and program selection, application assistance, visa and immigration support, scholarship guidance, career counseling, and 24/7 support. We also offer post-arrival assistance to help students settle into their new environment.
+            </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="bg-gray-50 rounded-lg shadow">
+            <button @click="open === 2 ? open = null : open = 2"
+                class="w-full flex justify-between items-center px-6 py-4 text-left focus:outline-none">
+                <span class="text-lg font-semibold text-gray-900">2. How long has TechConsultancy been in the education consultancy industry?</span>
+                <span>
+                    <svg x-show="open !== 2" class="w-6 h-6 text-red-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v8m-4-4h8" /></svg>
+                    <svg x-show="open === 2" class="w-6 h-6 text-red-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h8" /></svg>
+                </span>
+            </button>
+            <div x-show="open === 2" class="px-6 pb-4 text-gray-700">
+                TechConsultancy has been dedicated to assisting students since April 2004, with nearly two decades of experience in the field.
+            </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="bg-gray-50 rounded-lg shadow">
+            <button @click="open === 3 ? open = null : open = 3"
+                class="w-full flex justify-between items-center px-6 py-4 text-left focus:outline-none">
+                <span class="text-lg font-semibold text-gray-900">3. Why should I choose TechConsultancy for my study abroad journey?</span>
+                <span>
+                    <svg x-show="open !== 3" class="w-6 h-6 text-red-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v8m-4-4h8" /></svg>
+                    <svg x-show="open === 3" class="w-6 h-6 text-red-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h8" /></svg>
+                </span>
+            </button>
+            <div x-show="open === 3" class="px-6 pb-4 text-gray-700">
+                Choosing TechConsultancy means partnering with a team that offers expert guidance, 24/7 availability, a global network of top universities, and accreditations from reputable organizations.
+            </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="bg-gray-50 rounded-lg shadow">
+            <button @click="open === 4 ? open = null : open = 4"
+                class="w-full flex justify-between items-center px-6 py-4 text-left focus:outline-none">
+                <span class="text-lg font-semibold text-gray-900">4. How does TechConsultancy help with university and program selection?</span>
+                <span>
+                    <svg x-show="open !== 4" class="w-6 h-6 text-red-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v8m-4-4h8" /></svg>
+                    <svg x-show="open === 4" class="w-6 h-6 text-red-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h8" /></svg>
+                </span>
+            </button>
+            <div x-show="open === 4" class="px-6 pb-4 text-gray-700">
+                TechConsultancy provides personalized guidance to help you choose the right university and program based on your academic interests, career goals, and preferences.
+            </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="bg-gray-50 rounded-lg shadow">
+            <button @click="open === 5 ? open = null : open = 5"
+                class="w-full flex justify-between items-center px-6 py-4 text-left focus:outline-none">
+                <span class="text-lg font-semibold text-gray-900">5. What kind of support does TechConsultancy offer for the application process?</span>
+                <span>
+                    <svg x-show="open !== 5" class="w-6 h-6 text-red-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v8m-4-4h8" /></svg>
+                    <svg x-show="open === 5" class="w-6 h-6 text-red-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h8" /></svg>
+                </span>
+            </button>
+            <div x-show="open === 5" class="px-6 pb-4 text-gray-700">
+                TechConsultancy offers expert support with the application process, including advice on writing personal statements, securing references, and completing application forms.
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Alpine.js for accordion functionality -->
+<script src="//unpkg.com/alpinejs" defer></script>
 @endsection
