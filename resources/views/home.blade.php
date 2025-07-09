@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@extends('layouts.footer')
 
 @section('content')
 <!-- Hero Section -->
@@ -45,15 +46,15 @@
     <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         <!-- Country Card -->
         <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-green-400 hover:scale-105 transition">
-            <h3 class="text-xl font-semibold text-black mb-2">Canada</h3>
+            <h3 class="text-xl font-semibold text-black mb-2">France</h3>
             <p class="text-black">Top universities, PR pathways, and quality education.</p>
         </div>
         <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-green-400 hover:scale-105 transition">
-            <h3 class="text-xl font-semibold text-black mb-2">Germany</h3>
-            <p class="text-black">Zero tuition fee in public universities and great research opportunities.</p>
+            <h3 class="text-xl font-semibold text-black mb-2 text-center">Italy</h3>
+            <p class="text-black text-center">You have to pay Zero tuition fee in public universities and great research opportunities. In addition, you will be rewarded regional scholarship that will cover you tution fees, accomodation and canteen expense as well</p>
         </div>
         <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-green-400 hover:scale-105 transition">
-            <h3 class="text-xl font-semibold text-black mb-2">Australia</h3>
+            <h3 class="text-xl font-semibold text-black mb-2">Germany</h3>
             <p class="text-black">Excellent lifestyle, top universities, and work opportunities.</p>
         </div>
     </div>
