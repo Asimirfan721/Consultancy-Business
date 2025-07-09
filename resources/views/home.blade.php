@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@extends('layouts.footer')
+ 
 
 @section('content')
 <!-- Hero Section -->
@@ -144,4 +144,5 @@
 
 <!-- Alpine.js for accordion functionality -->
 <script src="//unpkg.com/alpinejs" defer></script>
+@include('layouts.footer')
 @endsection
