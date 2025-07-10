@@ -151,3 +151,53 @@
 <script src="//unpkg.com/alpinejs" defer></script>
 {{-- @include('layouts.footer') --}}
 @endsection
+
+<style>
+    .faq-section {
+        background: #F3FFE3;
+        padding: 2rem 1rem;
+        border-radius: 1.5rem;
+        max-width: 700px;
+        margin: 3rem auto;
+    }
+    .faq-title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #111;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .faq-item {
+        border-bottom: 1px solid #b5e0b7;
+        padding: 1rem 0;
+    }
+    .faq-question {
+        background: none;
+        border: none;
+        width: 100%;
+        text-align: left;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #111;
+        padding: 0;
+        cursor: pointer;
+        outline: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: color 0.2s;
+    }
+    .faq-question:hover {
+        color: #15803d;
+    }
+    .faq-answer {
+        color: #222;
+        font-size: 1rem;
+        margin-top: 0.5rem;
+        display: none;
+        transition: all 0.2s;
+    }
+    .faq-item.active .faq-answer {
+        display: block;
+    }
+</style>
