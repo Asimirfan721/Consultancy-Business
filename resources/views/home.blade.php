@@ -4,37 +4,42 @@
 @section('content')
 <!-- Hero Section -->
 <section class="p-10 rounded-2xl shadow-xl border border-green-200 bg-[#F3FFE3]">
-    <!-- Heading -->
-    <h1 class="text-4xl md:text-5xl font-extrabold text-black leading-tight mb-6">
-        Welcome to <span class="font-extrabold text-black">TechConsultancy</span>
-    </h1>
-
-    <!-- Description -->
-    <p class="text-black text-lg md:text-xl max-w-3xl mb-8">
-        Your trusted partner in fulfilling study-abroad dreams. We assist you every step of the way — from selecting universities to building your visa file.
-    </p>
-
-    <!-- Social Media Icons -->
-    <div class="flex flex-wrap gap-4 mb-8">
-        <a href="https://facebook.com" target="_blank"
-           class="flex items-center gap-2 bg-white text-black px-4 py-2 rounded-full hover:bg-green-200 transition shadow-sm border border-green-200">
-            <i class="fab fa-facebook-f"></i> Facebook
+    <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+        <!-- Left: Image -->
+        <a href="{{ url('/') }}" class="md:w-1/3 w-full flex justify-start">
+            <img src="{{ asset('images/hero-home.png') }}" alt="Home"
+                 class="w-60 md:w-100 my-4 rounded-xl shadow-lg hover:scale-105 transition" />
         </a>
-        <a href="https://instagram.com" target="_blank"
-           class="flex items-center gap-2 bg-white text-black px-4 py-2 rounded-full hover:bg-green-200 transition shadow-sm border border-green-200">
-            <i class="fab fa-instagram"></i> Instagram
-        </a>
-        <a href="https://linkedin.com" target="_blank"
-           class="flex items-center gap-2 bg-white text-black px-4 py-2 rounded-full hover:bg-green-200 transition shadow-sm border border-green-200">
-            <i class="fab fa-linkedin-in"></i> LinkedIn
-        </a>
+        <!-- Right: Text -->
+        <div class="md:w-2/3 w-full">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-black leading-tight mb-6">
+                Welcome to <span class="font-extrabold text-black">TechConsultancy</span>
+            </h1>
+            <p class="text-black text-lg md:text-xl max-w-3xl mb-8">
+                Your trusted partner in fulfilling study-abroad dreams. We assist you every step of the way — from selecting universities to building your visa file.
+            </p>
+            <!-- Social Media Icons -->
+            <div class="flex flex-wrap gap-4 mb-8">
+                <a href="https://facebook.com" target="_blank"
+                   class="flex items-center gap-2 bg-white text-black px-4 py-2 rounded-full hover:bg-green-200 transition shadow-sm border border-green-200">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+                <a href="https://instagram.com" target="_blank"
+                   class="flex items-center gap-2 bg-white text-black px-4 py-2 rounded-full hover:bg-green-200 transition shadow-sm border border-green-200">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="https://linkedin.com" target="_blank"
+                   class="flex items-center gap-2 bg-white text-black px-4 py-2 rounded-full hover:bg-green-200 transition shadow-sm border border-green-200">
+                    <i class="fab fa-linkedin-in"></i> LinkedIn
+                </a>
+            </div>
+            <!-- Explore Button -->
+            <a href="#countries"
+               class="inline-block px-8 py-3 rounded-full bg-green-600 text-white font-semibold shadow-md hover:bg-green-700 transition-all duration-200">
+                Explore Countries
+            </a>
+        </div>
     </div>
-
-    <!-- Explore Button -->
-    <a href="#countries"
-       class="inline-block px-8 py-3 rounded-full bg-green-600 text-white font-semibold shadow-md hover:bg-green-700 transition-all duration-200">
-        Explore Countries
-    </a>
 </section>
 
 <!-- Popular Countries Section -->
@@ -144,5 +149,5 @@
 
 <!-- Alpine.js for accordion functionality -->
 <script src="//unpkg.com/alpinejs" defer></script>
-@include('layouts.footer')
+{{-- @include('layouts.footer') --}}
 @endsection
