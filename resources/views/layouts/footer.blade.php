@@ -38,7 +38,7 @@
                         </span>
                         <div>
                             <div class="text-xs text-black">2025-05-19</div>
-                            <a href="#" class="font-semibold text-black hover:underline text-sm">Study Scholarships in Denmark</a>
+                            <a href="/blogs" class="font-semibold text-black hover:underline text-sm">Study Scholarships in Denmark</a>
                         </div>
                     </li>
                     <li class="flex items-start gap-2">
