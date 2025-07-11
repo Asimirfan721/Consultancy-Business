@@ -60,6 +60,9 @@
                         Mandatory Documents
                     </a>
                 </li>
+            
+                     <li><a href="{{ url('/blogs') }}" class="px-5 py-2 rounded-full bg-green-100 text-black font-semibold shadow transition-all duration-200 hover:bg-green-300">Blogs</a></li>
+                
                 <li>
                     <a href="{{ route('contact') }}"
                        class="px-5 py-2 rounded-full bg-green-100 text-black font-semibold shadow transition-all duration-200 hover:bg-green-300">

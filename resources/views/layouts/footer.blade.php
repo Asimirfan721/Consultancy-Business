@@ -23,10 +23,9 @@
                 <h3 class="font-bold text-lg text-black mb-2">Quick Links</h3>
                 <ul class="space-y-1 text-black">
                     <li><a href="{{ url('/about') }}" class="hover:underline flex items-center gap-2"><span>&rsaquo;</span> About us</a></li>
-                    <li><a href="{{ url('/locations') }}" class="hover:underline flex items-center gap-2"><span>&rsaquo;</span> Locations</a></li>
+                    
                     <li><a href="{{ url('/blogs') }}" class="hover:underline flex items-center gap-2"><span>&rsaquo;</span> Recent blogs</a></li>
-                    <li><a href="{{ url('/faqs') }}" class="hover:underline flex items-center gap-2"><span>&rsaquo;</span> FAQs</a></li>
-                </ul>
+                              </ul>
             </div>
 
             <!-- Recent Blogs -->

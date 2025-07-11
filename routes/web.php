@@ -3,6 +3,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ScholarshipController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BlogController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -25,4 +26,6 @@ Route::post('/admin/scholarships/store', [ScholarshipController::class, 'store']
 Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/blogs', [PageController::class, 'blogs'])->name('blogs');
 
-
+//Blog Routes
+Route::get('/blogs', [BlogController::class, 'index'])->name('blogs');
+Route::get('/blogs/{slug}', [BlogController::class, 'show'])->name('blog.details');
