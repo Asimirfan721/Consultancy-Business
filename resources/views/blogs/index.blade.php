@@ -15,7 +15,12 @@
             </a>
         </div>
 
-        <!-- More blogs can go here... -->
-    </div>
+        <div class="bg-white p-6 rounded-xl shadow-md border hover:shadow-xl transition">
+    <h2 class="text-xl font-semibold text-blue-700 mb-3">Study in Italy</h2>
+    <p class="text-gray-600 mb-4">Explore scholarship, visa, and study opportunities in Italy for international students...</p>
+   <a href="{{ route('blog.italy') }}" class="text-blue-500 hover:underline font-medium">Read More2 →</a>
+
+</div>   
+ </div> 
 </div>
 @endsection

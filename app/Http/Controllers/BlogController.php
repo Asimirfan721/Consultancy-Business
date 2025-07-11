@@ -18,5 +18,9 @@ class BlogController extends Controller
 
         abort(404); // page not found for unknown slug
     }
-    
+    public function studyInItaly()
+{
+    return view('blogs.italy');
+}
+
 }
