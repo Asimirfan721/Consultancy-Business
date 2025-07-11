@@ -20,3 +20,8 @@ Route::get('/reviews', [PageController::class, 'reviews'])->name('reviews');
 Route::get('/admin/scholarships/create', [ScholarshipController::class, 'create'])->name('scholarships.create');
 Route::post('/admin/scholarships/store', [ScholarshipController::class, 'store'])->name('scholarships.store');
 
+
+//Footer
+Route::get('/about', [PageController::class, 'about'])->name('about');
+
+
