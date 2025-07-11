@@ -23,5 +23,6 @@ Route::post('/admin/scholarships/store', [ScholarshipController::class, 'store']
 
 //Footer
 Route::get('/about', [PageController::class, 'about'])->name('about');
+Route::get('/blogs', [PageController::class, 'blogs'])->name('blogs');
 
 
