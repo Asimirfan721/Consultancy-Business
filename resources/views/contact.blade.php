@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="min-h-screen bg-[#F3FFE3] py-12 px-4">
+<div class="min-h-screen bg-[#F3FFE3] py-16 px-8">
     <div class="max-w-3xl mx-auto">
         <h2 class="text-3xl font-bold mb-6 text-center text-black">Contact Us</h2>
 
@@ -14,8 +14,8 @@
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12H8m8 0a4 4 0 11-8 0 4 4 0 018 0zm0 0v1a2 2 0 002 2h2a2 2 0 002-2v-1a2 2 0 00-2-2h-2a2 2 0 00-2 2z" /></svg>
                 Email: rajputasim735@gmail.com
             </a>
-            <a href="https://wa.me/923052135624" target="_blank" class="flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-black font-semibold hover:bg-green-200 transition">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16.72 11.06a6.5 6.5 0 10-11.44 6.11L3 21l3.92-1.28a6.5 6.5 0 009.8-8.66z" /></svg>
+            <a href="https://wa.me/923052135624" target="_blank" class="flex items-center gap-4 px-8 py-2 rounded-full bg-green-100 text-black font-semibold hover:bg-green-200 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M16.72 11.06a6.5 6.5 0 10-11.44 6.11L3 21l3.92-1.28a6.5 6.5 0 009.8-8.66z" /></svg>
                 WhatsApp: 0305 2135624
             </a>
         </div>
