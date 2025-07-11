@@ -5,16 +5,16 @@
             <!-- Logo & About -->
             <div class="flex-1 min-w-[220px]">
                 <div class="flex items-center gap-2 mb-2">
-                    <img src="/images/times-logo.png" alt="Times Consultant" class="h-10 w-auto" />
+                    <img src="/images/Tech Consultancy.jpg" alt="Tech Consultant" class="h-10 w-auto" />
                     <div>
-                        <div class="text-xl font-bold text-red-700 leading-tight">TIMES CONSULTANT</div>
+                        <div class="text-xl font-bold text-red-700 leading-tight">Tech CONSULTANT</div>
                         <div class="text-xs font-bold text-red-700">21 YEARS OF SHAPING CAREERS</div>
                     </div>
                 </div>
                 <p class="text-black text-sm mt-2 leading-relaxed">
                     Official Representatives of 500+ Universities & Colleges Worldwide.<br>
                     As your trusted study abroad advisor!<br>
-                    Times Consultant was established in 2004 in Karachi, Pakistan.
+                    Tech Consultant was established in 2004 in Karachi, Pakistan.
                 </p>
             </div>
 
@@ -61,7 +61,7 @@
                         <span class="inline-flex items-center justify-center w-8 h-8 rounded bg-white border border-gray-300 text-red-600">
                             <i class="far fa-envelope"></i>
                         </span>
-                        <span class="text-black text-sm">study@timesconsultant.com</span>
+                        <span class="text-black text-sm">study@Techconsultant.com</span>
                     </li>
                     <li class="flex items-center gap-2">
                         <span class="inline-flex items-center justify-center w-8 h-8 rounded bg-white border border-gray-300 text-red-600">
@@ -85,7 +85,7 @@
         <!-- Bottom Bar -->
         <div class="flex flex-col md:flex-row justify-between items-center border-t border-gray-200 pt-4 text-sm text-black">
             <div class="mb-2 md:mb-0">
-                © Times Consultant 2025 | All Rights Reserved
+                © Tech Consultant 2025 | All Rights Reserved
             </div>
             <div class="flex gap-6">
                 <a href="#" class="hover:underline">Terms & Conditions</a>
