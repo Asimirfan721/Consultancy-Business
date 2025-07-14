@@ -34,13 +34,14 @@
                 </a>
             </div>
             <!-- Explore Button -->
-            <a href="#countries"
-               class="inline-block px-8 py-3 rounded-full bg-green-600 text-white font-semibold shadow-md hover:bg-green-700 transition-all duration-200">
-                Explore Countries
+            <a href="http://127.0.0.1:8000/blogs"
+               class="inline-block px-8 py-3 rounded-full bg-green-600 text-white font-semibold shadow-md hover:bg-green-700 transition-all duration-200"
+               title="Admission Updates: Stay informed with instant updates on your applications. Effortlessly monitor your application progress and receive timely updates and offers">
+                Explore+
             </a>
             <a href="https://timescoursefinder.com/" target="_blank"
                class="inline-block px-8 py-3 rounded-full bg-blue-600 text-white font-semibold shadow-md ml-4 hover:bg-blue-700 transition-all duration-200"
-               title="Find Courses">
+               title="Find Courses: Unsure about the best universities and courses for you? Use our AI-powered University Course Finder to find exactly what you need, saving you months of research">
                 Find Courses
             </a>
         </div>
