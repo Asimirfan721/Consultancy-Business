@@ -51,8 +51,12 @@
     <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         <!-- Country Card -->
         <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-green-400 hover:scale-105 transition">
-            <h3 class="text-xl font-semibold text-black mb-2">France</h3>
+            <h3 class="text-xl font-semibold text-black mb-2">Denmark</h3>
             <p class="text-black">Top universities, PR pathways, and quality education.</p>
+             <a href="{{ route('blog.details', 'study-scholarships-in-denmark') }}"
+               class="text-blue-500 hover:underline font-medium">
+               Read More →
+            </a>
         </div>
         <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-green-400 hover:scale-105 transition">
             <h3 class="text-xl font-semibold text-black mb-2 text-center">Italy</h3>
