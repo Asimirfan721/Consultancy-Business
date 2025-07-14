@@ -55,7 +55,7 @@
     </div>
 </section>
 
-<!-- Popular Countries Section -->
+ 
 <section id="countries" class="mt-16 bg-[#F3FFE3] py-12 rounded-2xl">
     <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center text-black">
         Popular Countries We Guide For
