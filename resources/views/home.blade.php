@@ -33,17 +33,24 @@
                     <i class="fab fa-linkedin-in"></i> LinkedIn
                 </a>
             </div>
-            <!-- Explore Button -->
-            <a href="http://127.0.0.1:8000/blogs"
-               class="inline-block px-8 py-3 rounded-full bg-green-600 text-white font-semibold shadow-md hover:bg-green-700 transition-all duration-200"
-               title="Admission Updates: Stay informed with instant updates on your applications. Effortlessly monitor your application progress and receive timely updates and offers">
-                Explore+
-            </a>
-            <a href="https://timescoursefinder.com/" target="_blank"
-               class="inline-block px-8 py-3 rounded-full bg-blue-600 text-white font-semibold shadow-md ml-4 hover:bg-blue-700 transition-all duration-200"
-               title="Find Courses: Unsure about the best universities and courses for you? Use our AI-powered University Course Finder to find exactly what you need, saving you months of research">
-                Find Courses
-            </a>
+            <!-- Explore+ Button with Find Courses Hover Box -->
+            <div class="relative inline-block">
+                <a href="http://127.0.0.1:8000/blogs"
+                   class="inline-block px-8 py-3 rounded-full bg-green-600 text-white font-semibold shadow-md hover:bg-green-700 transition-all duration-200"
+                   title="Admission Updates: Stay informed with instant updates on your applications. Effortlessly monitor your application progress and receive timely updates and offers"
+                   id="explore-plus-btn">
+                    Explore+
+                </a>
+                <!-- Hover Box -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 mt-2 w-80 bg-white border border-green-300 rounded-xl shadow-lg p-4 text-black text-sm z-10 opacity-0 pointer-events-none transition-opacity duration-200"
+                     style="top:100%;"
+                     id="find-courses-box">
+                    <h3 class="font-bold text-lg mb-2 text-green-700">Find Courses</h3>
+                    <p>
+                        Unsure about the best universities and courses for you? Use our AI-powered University Course Finder to find exactly what you need, saving you months of research.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
