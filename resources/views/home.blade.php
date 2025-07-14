@@ -38,6 +38,11 @@
                class="inline-block px-8 py-3 rounded-full bg-green-600 text-white font-semibold shadow-md hover:bg-green-700 transition-all duration-200">
                 Explore Countries
             </a>
+            <a href="https://timescoursefinder.com/" target="_blank"
+               class="inline-block px-8 py-3 rounded-full bg-blue-600 text-white font-semibold shadow-md ml-4 hover:bg-blue-700 transition-all duration-200"
+               title="Find Courses">
+                Find Courses
+            </a>
         </div>
     </div>
 </section>
