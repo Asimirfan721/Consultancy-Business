@@ -33,7 +33,7 @@
                     <i class="fab fa-linkedin-in"></i> LinkedIn
                 </a>
             </div>
-            <!-- Explore+ Button with Find Courses Hover Box -->
+           
             <div class="relative inline-block">
                 <a href="http://127.0.0.1:8000/blogs"
                    class="inline-block px-8 py-3 rounded-full bg-green-600 text-white font-semibold shadow-md hover:bg-green-700 transition-all duration-200"
