@@ -64,79 +64,57 @@
             <div class="bg-green-100 text-green-700 p-4 mb-6 rounded shadow">{{ session('success') }}</div>
         @endif
 
+        <!-- Redesigned Contact Form -->
         <form action="{{ route('contact.submit') }}" method="POST"
-              class="max-w-2xl mx-auto space-y-5 bg-white p-8 rounded-2xl shadow-xl border border-green-200 mt-10">
+              class="max-w-2xl mx-auto space-y-7 bg-white p-10 rounded-3xl shadow-2xl border border-green-200 mt-10 relative overflow-hidden">
             @csrf
-            <h2 class="text-2xl font-bold text-black mb-6 text-center">📬 Contact Us</h2>
+            <h2 class="text-3xl font-extrabold text-green-700 mb-8 text-center tracking-tight">📬 Get In Touch</h2>
 
-            <!-- Name -->
-            <div>
-                <label class="block mb-1 text-black font-medium">Your Name</label>
-                <input type="text" name="name" required
-                       class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400 transition text-black bg-[#F3FFE3] hover:ring-green-600">
+            @php
+                $fields = [
+                    ['name' => 'name', 'type' => 'text', 'label' => 'Your Name', 'icon' => 'fas fa-user'],
+                    ['name' => 'city', 'type' => 'text', 'label' => 'Your City', 'icon' => 'fas fa-city'],
+                    ['name' => 'phone', 'type' => 'text', 'label' => 'Phone Number', 'icon' => 'fas fa-phone'],
+                    ['name' => 'email', 'type' => 'email', 'label' => 'Email Address', 'icon' => 'fas fa-envelope'],
+                    ['name' => 'destination', 'type' => 'text', 'label' => 'Where do you want to apply?', 'icon' => 'fas fa-globe'],
+                    ['name' => 'qualification', 'type' => 'text', 'label' => 'Your Qualification', 'icon' => 'fas fa-graduation-cap'],
+                    ['name' => 'degree_level', 'type' => 'text', 'label' => 'Degree Level (e.g. Bachelor, Master, PhD)', 'icon' => 'fas fa-layer-group'],
+                    ['name' => 'university', 'type' => 'text', 'label' => 'Desired University', 'icon' => 'fas fa-university'],
+                ];
+            @endphp
+
+            @foreach($fields as $field)
+            <div class="relative group">
+                <span class="absolute left-3 top-1/2 transform -translate-y-1/2 text-green-500 pointer-events-none">
+                    <i class="{{ $field['icon'] }}"></i>
+                </span>
+                <input type="{{ $field['type'] }}" name="{{ $field['name'] }}" required
+                       class="pl-10 pr-4 py-3 w-full bg-[#F3FFE3] border border-gray-300 rounded-xl shadow-sm text-black focus:outline-none focus:ring-2 focus:ring-green-400 transition duration-200 hover:ring-green-600 peer"
+                       placeholder=" " />
+                <label class="absolute left-10 top-1/2 transform -translate-y-1/2 bg-white px-1 text-gray-500 pointer-events-none transition-all duration-200 peer-focus:-top-4 peer-focus:text-green-700 peer-focus:text-sm peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500">
+                    {{ $field['label'] }}
+                </label>
             </div>
+            @endforeach
 
-            <!-- City -->
-            <div>
-                <label class="block mb-1 text-black font-medium">Your City</label>
-                <input type="text" name="city" required
-                       class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400 transition text-black bg-[#F3FFE3] hover:ring-green-600">
-            </div>
-
-            <!-- Phone -->
-            <div>
-                <label class="block mb-1 text-black font-medium">Phone Number</label>
-                <input type="text" name="phone" required
-                       class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400 transition text-black bg-[#F3FFE3] hover:ring-green-600">
-            </div>
-
-            <!-- Email -->
-            <div>
-                <label class="block mb-1 text-black font-medium">Email Address</label>
-                <input type="email" name="email" required
-                       class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400 transition text-black bg-[#F3FFE3] hover:ring-green-600">
-            </div>
-
-            <!-- Destination -->
-            <div>
-                <label class="block mb-1 text-black font-medium">Where do you want to apply?</label>
-                <input type="text" name="destination" required
-                       class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400 transition text-black bg-[#F3FFE3] hover:ring-green-600">
-            </div>
-
-            <!-- Qualification -->
-            <div>
-                <label class="block mb-1 text-black font-medium">Your Qualification</label>
-                <input type="text" name="qualification" required
-                       class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400 transition text-black bg-[#F3FFE3] hover:ring-green-600">
-            </div>
-
-            <!-- Degree Level -->
-            <div>
-                <label class="block mb-1 text-black font-medium">Degree Level (e.g. Bachelor, Master, PhD)</label>
-                <input type="text" name="degree_level" required
-                       class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400 transition text-black bg-[#F3FFE3] hover:ring-green-600">
-            </div>
-
-            <!-- University -->
-            <div>
-                <label class="block mb-1 text-black font-medium">Desired University</label>
-                <input type="text" name="university" required
-                       class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400 transition text-black bg-[#F3FFE3] hover:ring-green-600">
-            </div>
-
-            <!-- Programs -->
-            <div>
-                <label class="block mb-1 text-black font-medium">Write at least 3 programs of your choice</label>
+            <!-- Programs textarea -->
+            <div class="relative group">
+                <span class="absolute left-3 top-4 text-green-500 pointer-events-none">
+                    <i class="fas fa-list"></i>
+                </span>
                 <textarea name="programs" rows="4" required
-                          class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400 transition resize-none text-black bg-[#F3FFE3] hover:ring-green-600"></textarea>
+                          class="pl-10 pr-4 py-3 w-full bg-[#F3FFE3] border border-gray-300 rounded-xl shadow-sm text-black focus:outline-none focus:ring-2 focus:ring-green-400 transition duration-200 hover:ring-green-600 peer resize-none"
+                          placeholder=" "></textarea>
+                <label class="absolute left-10 top-4 bg-white px-1 text-gray-500 pointer-events-none transition-all duration-200 peer-focus:-top-3 peer-focus:text-green-700 peer-focus:text-sm peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500">
+                    Write at least 3 programs of your choice
+                </label>
             </div>
 
             <!-- Submit Button -->
-            <div class="text-center">
+            <div class="text-center mt-8">
                 <button type="submit"
-                        class="bg-green-600 text-white px-8 py-3 rounded-full shadow-lg hover:bg-green-700 transition-all duration-300 font-semibold tracking-wide">
-                    Submit Now
+                        class="bg-gradient-to-r from-green-500 to-green-700 text-white px-10 py-3 rounded-full shadow-xl hover:scale-105 hover:from-green-600 hover:to-green-800 transition-all duration-300 font-bold text-lg tracking-wide">
+                    <i class="fas fa-paper-plane mr-2"></i> Submit Now
                 </button>
             </div>
         </form>
