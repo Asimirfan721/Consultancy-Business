@@ -16,7 +16,7 @@
     <!-- Main Content -->
     <div class="bg-white p-8 rounded-xl shadow-lg space-y-6">
         <p class="text-gray-800 leading-relaxed">
-            TIMES Consultant stands as a dynamic force in the overseas education and immigration consultancy business,
+            Tech Consultant stands as a dynamic force in the overseas education and immigration consultancy business,
             proudly contributing its expertise since April 2004. Serving a vital link between prospective students and
             universities as our profound commitment, our mission is to facilitate a seamless selection process, guiding
             students to choose the best foreign education institute tailored to their academic requirements.

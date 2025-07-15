@@ -29,7 +29,7 @@
                 <p class="text-gray-600 mb-6 flex-1">Explore scholarship, visa, and study opportunities in Italy for international students...</p>
             </div>
             <div class="px-6 pb-6">
-                <a href="{{ route('blogs.italy') }}"
+                <a href="{{ route('blog.study-in-italy') }}"
                    class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition">
                    Study →
                 </a>
