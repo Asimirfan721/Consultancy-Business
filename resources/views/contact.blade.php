@@ -1,24 +1,47 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="min-h-screen bg-[#F3FFE3] py-16 px-8">
-    <div class="max-w-3xl mx-auto">
-        <h2 class="text-3xl font-bold mb-6 text-center text-black">Contact Us</h2>
+<style>
+    .contact-hero-bg {
+        background: linear-gradient(rgba(20,40,60,0.6), rgba(20,40,60,0.6)), url('{{ asset('images/about-us.jpg') }}') center center / cover no-repeat;
+        min-height: 50vh;
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
 
-        <div class="flex flex-col md:flex-row items-center justify-center gap-6 mb-8">
-            <a href="tel:03052135624" class="flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-black font-semibold hover:bg-green-200 transition">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm0 12a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2v-2zm12-12a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zm0 12a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" /></svg>
+<!-- Contact Hero Section -->
+<section class="contact-hero-bg mb-12" style="overflow:hidden;">
+    <div class="text-center w-full max-w-2xl mx-auto px-4">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4 drop-shadow-lg">Contact Us</h2>
+        <p class="text-lg md:text-xl text-gray-200 mb-6 font-medium drop-shadow">
+            Reach out to TechConsultancy for expert guidance and support on your study abroad journey.
+        </p>
+        <p> <a href="tel:03052135624" class="flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-black font-semibold hover:bg-green-200 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 20" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm0 12a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2v-2zm12-12a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zm0 12a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" /></svg>
                 Call: 0305 2135624
-            </a>
-            <a href="mailto:rajputasim735@gmail.com" class="flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-black font-semibold hover:bg-green-200 transition">
+            </a> <br>
+             <a href="mailto:rajputasim735@gmail.com" class="flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-black font-semibold hover:bg-green-200 transition">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12H8m8 0a4 4 0 11-8 0 4 4 0 018 0zm0 0v1a2 2 0 002 2h2a2 2 0 002-2v-1a2 2 0 00-2-2h-2a2 2 0 00-2 2z" /></svg>
                 Email: rajputasim735@gmail.com
-            </a>
+            </a> <br>
             <a href="https://wa.me/923052135624" target="_blank" class="flex items-center gap-4 px-8 py-2 rounded-full bg-green-100 text-black font-semibold hover:bg-green-200 transition">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M16.72 11.06a6.5 6.5 0 10-11.44 6.11L3 21l3.92-1.28a6.5 6.5 0 009.8-8.66z" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M16.72 11.06a6.5 6.5 0 10-11.44 6.11L3 21l3.92-1.28a6.5 6.5 0 009.8-8.66z" /></svg>
                 WhatsApp: 0305 2135624
             </a>
-        </div>
+        
+        </p>
+    </div>
+</section>
+
+
 
         @if(session('success'))
             <div class="bg-green-100 text-green-700 p-4 mb-6 rounded">{{ session('success') }}</div>
