@@ -3,9 +3,14 @@
 @section('content')
 <style>
     .hero-bg {
-        background: linear-gradient(rgba(20,40,60,0.7), rgba(20,40,60,0.7)), url('{{ asset('images/book.jpg') }}') center/cover no-repeat;
+        background: linear-gradient(rgba(20,40,60,0.7), rgba(20,40,60,0.7)), url('{{ asset('images/book.jpeg') }}') center center / cover no-repeat;
         min-height: 60vh;
+        width: 100vw;
         position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
     }
     .social-icon {
         transition: transform 0.2s, box-shadow 0.2s;
@@ -25,7 +30,7 @@
 </style>
 
 <!-- Hero Section -->
-<section class="hero-bg flex items-center justify-center px-4 py-20 rounded-2xl shadow-xl mb-16">
+<section class="hero-bg flex items-center justify-center py-20 shadow-xl mb-16" style="overflow:hidden;">
     <div class="text-center w-full max-w-2xl mx-auto">
         <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-4 drop-shadow-lg">
             Welcome to <span class="text-green-400">TechConsultancy</span>
