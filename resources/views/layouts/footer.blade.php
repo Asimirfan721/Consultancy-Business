@@ -96,7 +96,7 @@
                 <a href="https://facebook.com" target="_blank" class="bg-red-700 text-white rounded-l-full px-4 py-2 flex items-center">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="https://wa.me/923000000000" target="_blank" class="bg-red-700 text-white rounded-full px-4 py-2 flex items-center font-semibold">
+                <a href="https://wa.me/923052135624" target="_blank" class="bg-red-700 text-white rounded-full px-4 py-2 flex items-center font-semibold">
                     <i class="fab fa-whatsapp mr-2"></i> Chat with us
                 </a>
             </div>

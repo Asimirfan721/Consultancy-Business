@@ -59,7 +59,7 @@
 </section>
 
 <div class="min-h-screen bg-[#F3FFE3] py-16 px-4">
-    <div class="max-w-3xl mx-auto">
+    <div class="max-w-2xl mx-auto">
         @if(session('success'))
             <div class="bg-green-100 text-green-700 p-4 mb-6 rounded shadow">{{ session('success') }}</div>
         @endif
