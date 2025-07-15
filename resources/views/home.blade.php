@@ -30,36 +30,54 @@
 </style>
 
 <!-- Hero Section -->
-<section class="hero-bg flex items-center justify-center py-20 shadow-xl mb-16" style="overflow:hidden;">
-    <div class="text-center w-full max-w-2xl mx-auto">
-        <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-4 drop-shadow-lg">
-            Welcome to <span class="text-green-400">TechConsultancy</span>
-        </h1>
-        <p class="text-xl md:text-2xl text-gray-200 mb-8 font-medium drop-shadow">
-            Your trusted partner in fulfilling study-abroad dreams.<br>
-            We assist you every step of the way — from selecting universities to building your visa file.
-        </p>
-        <div class="flex justify-center gap-6 mb-10">
-            <a href="https://facebook.com" target="_blank" class="social-icon text-white text-3xl hover:text-green-400">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://instagram.com" target="_blank" class="social-icon text-white text-3xl hover:text-pink-400">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://linkedin.com" target="_blank" class="social-icon text-white text-3xl hover:text-blue-400">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-        </div>
-        <!-- Explore+ Info Box -->
-        <div class="explore-box rounded-2xl p-8 mx-auto max-w-md shadow-lg mb-2">
-            <h2 class="text-2xl font-bold text-green-700 mb-2">Find Courses</h2>
-            <p class="text-gray-700 mb-6">
-                Unsure about the best universities and courses for you? Use our AI-powered University Course Finder to find exactly what you need, saving you months of research.
+<section class="p-10 rounded-2xl shadow-xl border border-green-200 bg-[#F3FFE3]">
+    <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+        <!-- Left: Image -->
+        <a href="{{ url('/') }}" class="md:w-1/3 w-full flex justify-start">
+            <img src="{{ asset('images/hero-home.png') }}" alt="Home"
+                 class="w-60 md:w-100 my-4 rounded-xl shadow-lg hover:scale-105 transition" />
+        </a>
+        <!-- Right: Text -->
+        <div class="md:w-2/3 w-full">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-black leading-tight mb-6">
+                Welcome to <span class="font-extrabold text-black">TechConsultancy</span>
+            </h1>
+            <p class="text-black text-lg md:text-xl max-w-3xl mb-8">
+                Your trusted partner in fulfilling study-abroad dreams. We assist you every step of the way — from selecting universities to building your visa file.
             </p>
-            <a href="https://timescoursefinder.com/" target="_blank"
-               class="inline-block px-8 py-3 rounded-full bg-green-600 text-white font-semibold shadow-md hover:bg-green-700 transition-all duration-200 text-lg">
-                Explore+
-            </a>
+            <!-- Social Media Icons -->
+            <div class="flex flex-wrap gap-4 mb-8">
+                <a href="https://facebook.com" target="_blank"
+                   class="flex items-center gap-2 bg-white text-black px-4 py-2 rounded-full hover:bg-green-200 transition shadow-sm border border-green-200">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+                <a href="https://instagram.com" target="_blank"
+                   class="flex items-center gap-2 bg-white text-black px-4 py-2 rounded-full hover:bg-green-200 transition shadow-sm border border-green-200">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="https://linkedin.com" target="_blank"
+                   class="flex items-center gap-2 bg-white text-black px-4 py-2 rounded-full hover:bg-green-200 transition shadow-sm border border-green-200">
+                    <i class="fab fa-linkedin-in"></i> LinkedIn
+                </a>
+            </div>
+            <!-- Explore+ Button with Find Courses Hover Box -->
+            <div class="relative inline-block">
+                <a href="http://127.0.0.1:8000/blogs"
+                   class="inline-block px-8 py-3 rounded-full bg-green-600 text-white font-semibold shadow-md hover:bg-green-700 transition-all duration-200"
+                   title="Admission Updates: Stay informed with instant updates on your applications. Effortlessly monitor your application progress and receive timely updates and offers"
+                   id="explore-plus-btn">
+                    Explore+
+                </a>
+                <!-- Hover Box -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 mt-2 w-80 bg-white border border-green-300 rounded-xl shadow-lg p-4 text-black text-sm z-10 opacity-0 pointer-events-none transition-opacity duration-200"
+                     style="top:100%;"
+                     id="find-courses-box">
+                    <h3 class="font-bold text-lg mb-2 text-green-700">Find Courses</h3>
+                    <p>
+                        Unsure about the best universities and courses for you? Use our AI-powered University Course Finder to find exactly what you need, saving you months of research.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
