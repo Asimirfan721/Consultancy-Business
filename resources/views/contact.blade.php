@@ -14,37 +14,54 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        overflow: hidden;
+    }
+    .contact-btn {
+        transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .contact-btn:hover {
+        box-shadow: 0 8px 24px rgba(34,197,94,0.18);
+        transform: scale(1.07);
+        background: #bbf7d0;
+    }
+    .review-card:hover {
+        box-shadow: 0 12px 40px rgba(34,197,94,0.18);
+        transform: scale(1.05);
+        border-top-color: #22c55e;
     }
 </style>
 
 <!-- Contact Hero Section -->
-<section class="contact-hero-bg mb-12" style="overflow:hidden;">
+<section class="contact-hero-bg mb-12">
     <div class="text-center w-full max-w-2xl mx-auto px-4">
         <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4 drop-shadow-lg">Contact Us</h2>
-        <p class="text-lg md:text-xl text-gray-200 mb-6 font-medium drop-shadow">
+        <p class="text-lg md:text-xl text-gray-200 mb-8 font-medium drop-shadow">
             Reach out to TechConsultancy for expert guidance and support on your study abroad journey.
         </p>
-        <p> <a href="tel:03052135624" class="flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-black font-semibold hover:bg-green-200 transition">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 20" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm0 12a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2v-2zm12-12a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zm0 12a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" /></svg>
-                Call: 0305 2135624
-            </a> <br>
-             <a href="mailto:rajputasim735@gmail.com" class="flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-black font-semibold hover:bg-green-200 transition">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12H8m8 0a4 4 0 11-8 0 4 4 0 018 0zm0 0v1a2 2 0 002 2h2a2 2 0 002-2v-1a2 2 0 00-2-2h-2a2 2 0 00-2 2z" /></svg>
-                Email: rajputasim735@gmail.com
-            </a> <br>
-            <a href="https://wa.me/923052135624" target="_blank" class="flex items-center gap-4 px-8 py-2 rounded-full bg-green-100 text-black font-semibold hover:bg-green-200 transition">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M16.72 11.06a6.5 6.5 0 10-11.44 6.11L3 21l3.92-1.28a6.5 6.5 0 009.8-8.66z" /></svg>
-                WhatsApp: 0305 2135624
+        <div class="flex flex-wrap gap-4 justify-center mb-2">
+            <a href="tel:03052135624"
+               class="contact-btn inline-flex items-center gap-2 px-5 py-2 rounded-full bg-green-100 text-black font-semibold shadow hover:bg-green-200 transition w-auto">
+                <i class="fas fa-phone text-green-600"></i>
+                0305 2135624
             </a>
-        
-        </p>
+            <a href="mailto:rajputasim735@gmail.com"
+               class="contact-btn inline-flex items-center gap-2 px-5 py-2 rounded-full bg-green-100 text-black font-semibold shadow hover:bg-green-200 transition w-auto">
+                <i class="fas fa-envelope text-green-600"></i>
+                rajputasim735@gmail.com
+            </a>
+            <a href="https://wa.me/923052135624" target="_blank"
+               class="contact-btn inline-flex items-center gap-2 px-5 py-2 rounded-full bg-green-100 text-black font-semibold shadow hover:bg-green-200 transition w-auto">
+                <i class="fab fa-whatsapp text-green-600"></i>
+                WhatsApp
+            </a>
+        </div>
     </div>
 </section>
 
-
-
+<div class="min-h-screen bg-[#F3FFE3] py-16 px-4">
+    <div class="max-w-3xl mx-auto">
         @if(session('success'))
-            <div class="bg-green-100 text-green-700 p-4 mb-6 rounded">{{ session('success') }}</div>
+            <div class="bg-green-100 text-green-700 p-4 mb-6 rounded shadow">{{ session('success') }}</div>
         @endif
 
         <form action="{{ route('contact.submit') }}" method="POST"
@@ -56,63 +73,63 @@
             <div>
                 <label class="block mb-1 text-black font-medium">Your Name</label>
                 <input type="text" name="name" required
-                       class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400 transition text-black bg-[#F3FFE3]">
+                       class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400 transition text-black bg-[#F3FFE3] hover:ring-green-600">
             </div>
 
             <!-- City -->
             <div>
                 <label class="block mb-1 text-black font-medium">Your City</label>
                 <input type="text" name="city" required
-                       class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400 transition text-black bg-[#F3FFE3]">
+                       class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400 transition text-black bg-[#F3FFE3] hover:ring-green-600">
             </div>
 
             <!-- Phone -->
             <div>
                 <label class="block mb-1 text-black font-medium">Phone Number</label>
                 <input type="text" name="phone" required
-                       class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400 transition text-black bg-[#F3FFE3]">
+                       class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400 transition text-black bg-[#F3FFE3] hover:ring-green-600">
             </div>
 
             <!-- Email -->
             <div>
                 <label class="block mb-1 text-black font-medium">Email Address</label>
                 <input type="email" name="email" required
-                       class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400 transition text-black bg-[#F3FFE3]">
+                       class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400 transition text-black bg-[#F3FFE3] hover:ring-green-600">
             </div>
 
             <!-- Destination -->
             <div>
                 <label class="block mb-1 text-black font-medium">Where do you want to apply?</label>
                 <input type="text" name="destination" required
-                       class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400 transition text-black bg-[#F3FFE3]">
+                       class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400 transition text-black bg-[#F3FFE3] hover:ring-green-600">
             </div>
 
             <!-- Qualification -->
             <div>
                 <label class="block mb-1 text-black font-medium">Your Qualification</label>
                 <input type="text" name="qualification" required
-                       class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400 transition text-black bg-[#F3FFE3]">
+                       class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400 transition text-black bg-[#F3FFE3] hover:ring-green-600">
             </div>
 
             <!-- Degree Level -->
             <div>
                 <label class="block mb-1 text-black font-medium">Degree Level (e.g. Bachelor, Master, PhD)</label>
                 <input type="text" name="degree_level" required
-                       class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400 transition text-black bg-[#F3FFE3]">
+                       class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400 transition text-black bg-[#F3FFE3] hover:ring-green-600">
             </div>
 
             <!-- University -->
             <div>
                 <label class="block mb-1 text-black font-medium">Desired University</label>
                 <input type="text" name="university" required
-                       class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400 transition text-black bg-[#F3FFE3]">
+                       class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400 transition text-black bg-[#F3FFE3] hover:ring-green-600">
             </div>
 
             <!-- Programs -->
             <div>
                 <label class="block mb-1 text-black font-medium">Write at least 3 programs of your choice</label>
                 <textarea name="programs" rows="4" required
-                          class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400 transition resize-none text-black bg-[#F3FFE3]"></textarea>
+                          class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400 transition resize-none text-black bg-[#F3FFE3] hover:ring-green-600"></textarea>
             </div>
 
             <!-- Submit Button -->
@@ -129,7 +146,7 @@
             <h3 class="text-2xl font-bold mb-6 text-center text-black">What Our Clients Say</h3>
             <div class="flex flex-col md:flex-row gap-8 justify-center items-stretch">
                 <!-- Review 1 -->
-                <div class="flex-1 bg-white rounded-2xl shadow-lg p-6 transition-transform duration-300 hover:scale-105 hover:shadow-2xl border-t-4 border-green-200">
+                <div class="review-card flex-1 bg-white rounded-2xl shadow-lg p-6 transition-transform duration-300 border-t-4 border-green-200">
                     <div class="flex items-center gap-3 mb-2">
                         <span class="text-lg font-semibold text-black">Ayesha Khan</span>
                         <span class="text-sm text-gray-400">★ ★ ★ ★ ★</span>
@@ -139,7 +156,7 @@
                     </p>
                 </div>
                 <!-- Review 2 -->
-                <div class="flex-1 bg-white rounded-2xl shadow-lg p-6 transition-transform duration-300 hover:scale-105 hover:shadow-2xl border-t-4 border-green-400">
+                <div class="review-card flex-1 bg-white rounded-2xl shadow-lg p-6 transition-transform duration-300 border-t-4 border-green-400">
                     <div class="flex items-center gap-3 mb-2">
                         <span class="text-lg font-semibold text-black">Ali Raza</span>
                         <span class="text-sm text-gray-400">★ ★ ★ ★ ★</span>
@@ -152,4 +169,7 @@
         </div>
     </div>
 </div>
+
+<!-- Font Awesome CDN for icons (add in your layout if not already included) -->
+<script src="https://kit.fontawesome.com/2c36e9b7b9.js" crossorigin="anonymous"></script>
 @endsection
