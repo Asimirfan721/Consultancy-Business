@@ -190,5 +190,41 @@
         <img src="{{ asset('images/germany3.jpg') }}" alt="Germany Student Timeline" class="rounded-lg shadow-lg w-full max-w-3xl mx-auto">
     </div>
 </div>
+<!-- Summer Intake Section -->
+<div class="max-w-4xl mx-auto mt-16 text-gray-800 text-center">
+
+    <!-- Heading -->
+    <h2 class="text-3xl font-bold text-indigo-700 mb-4">
+        Summer Intake in German Universities Timeline
+    </h2>
+
+    <!-- Description -->
+    <p class="text-lg mb-6">
+        If you want to apply for your studies in Germany during the summer intake, here’s what the process will look like on a month-to-month basis:
+    </p>
+
+    <!-- Repeat Heading for Emphasis (as requested) -->
+    <h3 class="text-xl font-semibold text-gray-700 mb-6">
+        Summer Intake in German Universities Timeline
+    </h3>
+
+    <!-- Image -->
+    <div class="flex justify-center">
+        <img src="{{ asset('images/germany3.png') }}" alt="Summer Intake Timeline" class="rounded-lg shadow-lg w-full max-w-3xl">
+    </div>
+
+</div>
+<!-- Conclusion Section -->
+<div class="max-w-4xl mx-auto mt-16 text-gray-800 text-center">
+
+    <h2 class="text-3xl font-bold text-indigo-700 mb-4">Conclusion</h2>
+
+    <p class="text-lg leading-relaxed">
+        Studying in Germany is a rewarding journey that opens doors to world-class education, international exposure, and a rich cultural experience.
+        By following a monthly timeline and preparing in advance, you can smoothly navigate through all the necessary steps — from choosing your program to landing in Germany, ready to begin your academic adventure.
+        Remember, each intake has its own deadlines, so early planning is key to success.
+    </p>
+
+</div>
 
 @endsection
