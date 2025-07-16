@@ -50,6 +50,21 @@
             </div>
         </div>
 
+
+    <!-- chine-->
+    <div class="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition duration-300 flex flex-col">
+            <div class="p-6 flex-1 flex flex-col">
+                <h2 class="text-2xl font-bold text-blue-700 mb-2">Study in CHINA</h2>
+                <p class="text-gray-600 mb-6 flex-1">THE LAND OF TECH, Explore scholarship, visa, and study opportunities in Germany for international students...</p>
+            </div>
+            <div class="px-6 pb-6">
+                <a href="{{ route('blog.study-in-china') }}"
+                   class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition">
+                   Study →
+                </a>
+            </div>
+        </div>
+
     </div>
 </div>
 @endsection

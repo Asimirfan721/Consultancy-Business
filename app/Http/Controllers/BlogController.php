@@ -28,6 +28,9 @@ class BlogController extends Controller
     return view('blogs.germany');
 }
 
+public function studyInChina(){
+    return view('blogs.cscchina');
+}
 
 
 }
