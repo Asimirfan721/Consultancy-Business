@@ -53,7 +53,8 @@
         <li><strong>Calling Code:</strong> +39</li>
         <li><strong>Time Zone:</strong> CET (UTC+1)</li>
     </ul>
-
+<img src="{{ asset('images/italy.jpg') }}" alt="Study in Italy" class="w-full rounded-xl shadow mb-6" />
+    <p class="mb-6">
     <h2 class="text-2xl font-semibold text-indigo-700 mt-10 mb-4">🎓 More About Education in Italy</h2>
     <p class="mb-6">
         Italy's universities are among the oldest in Europe and the world — like the University of Bologna (1088), Padua (1222), and Naples (1224).
