@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class ScholarshipController extends Controller
 {
    public function index(){
-    return view('Schoalrship.index');
+    return view('Scholarship.index');
    }
    public function anso()
 {
