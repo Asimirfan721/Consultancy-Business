@@ -99,7 +99,7 @@
             <p class="text-gray-700 mb-4">
                 Zero tuition fee in public universities, great research opportunities, and regional scholarships covering tuition, accommodation, and meals.
             </p>
-            <a href="#" class="text-blue-600 hover:underline font-medium transition">Read More →</a>
+            <a href="blogs/study-in-italy" class="text-blue-600 hover:underline font-medium transition">Read More →</a>
         </div>
         <!-- Germany Card -->
         <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-green-400 hover:scale-105 hover:shadow-xl transition">

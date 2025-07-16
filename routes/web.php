@@ -29,4 +29,5 @@ Route::get('/about', [PageController::class, 'about'])->name('about');
 //Blog Routes
 Route::get('/blogs', [BlogController::class, 'index'])->name('blogs');
 Route::get('/blogs/study-in-italy', [BlogController::class, 'studyInItaly'])->name('blog.study-in-italy');
+Route::get('/blogs/study-in-germany', [BlogController::class, 'studyInGermany'])->name('blog.study-in-germany');
 Route::get('/blogs/{slug}', [BlogController::class, 'show'])->name('blog.details');

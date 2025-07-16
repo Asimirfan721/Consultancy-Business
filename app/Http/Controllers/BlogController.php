@@ -22,5 +22,7 @@ class BlogController extends Controller
 {
     return view('blogs.italy');
 }
-
-}
+    public function studyInGermany() // this method handles the route for Germany blog and showing an error related to page 404 not found
+{
+    return view('blogs.germany');
+}}
