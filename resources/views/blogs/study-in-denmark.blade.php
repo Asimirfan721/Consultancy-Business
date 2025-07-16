@@ -18,7 +18,7 @@
 
         <h2 class="text-2xl font-semibold text-blue-600">Types of Scholarships in Denmark</h2>
         <ul class="list-disc ml-6">
-            <li>Fully Funded Scholarships</li>
+            <li>Fully Funded s</li>
             <li>Undergraduate, Master, and PhD Scholarships</li>
             <li>Government & University Specific Scholarships</li>
         </ul>

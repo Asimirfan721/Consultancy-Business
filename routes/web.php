@@ -25,10 +25,14 @@ Route::post('/admin/scholarships/store', [ScholarshipController::class, 'store']
 //Footer
 Route::get('/about', [PageController::class, 'about'])->name('about');
 // Route::get('/blogs', [PageController::class, 'blogs'])->name('blogs');
+//Schoalrship 
+Route::get('/scholarship1s', [ScholarshipController::class, 'index'])->name('Scholarship.index');
+Route::get('/scholarships/anso', [ScholarshipController::class, 'anso'])->name('Scholarship.anso');
 
 //Blog Routes
 Route::get('/blogs', [BlogController::class, 'index'])->name('blogs');
 Route::get('/blogs/study-in-italy', [BlogController::class, 'studyInItaly'])->name('blog.study-in-italy');
 Route::get('/blogs/study-in-germany', [BlogController::class, 'studyInGermany'])->name('blog.study-in-germany');
-
 Route::get('/blogs/{slug}', [BlogController::class, 'show'])->name('blog.details');
+
+
