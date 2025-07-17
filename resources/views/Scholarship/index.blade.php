@@ -30,12 +30,9 @@
             <p class="text-gray-600 mb-2"><strong>Opening Date:</strong> 1st September</p>
             <p class="text-gray-600 mb-2"><strong>Deadline:</strong> It varies but 15th February 2026 for most of the Universities</p>
             <p class="text-gray-600 mb-4">One of the most prestigious scholarships in China offering monthly stipend, tuition, and more.</p>
-            <a href="{{ route('Scholarship.anso') }}" class="text-blue-500 hover:underline font-medium">Read More →</a>
+            <a href="{{ route('Scholarship.csc') }}" class="text-blue-500 hover:underline font-medium">Read More →</a>
         </div>
 
         <!-- Add more cards below following same format -->
-
     </div>
-
-
 @endsection

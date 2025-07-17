@@ -28,6 +28,7 @@ Route::get('/about', [PageController::class, 'about'])->name('about');
 //Schoalrship 
 Route::get('/scholarship1s', [ScholarshipController::class, 'index'])->name('Scholarship.index');
 Route::get('/scholarships/anso', [ScholarshipController::class, 'anso'])->name('Scholarship.anso');
+Route::get('/scholarships/csc', [ScholarshipController::class, 'csc'])->name('Scholarship.csc');
 
 //Blog Routes
 Route::get('/blogs', [BlogController::class, 'index'])->name('blogs');

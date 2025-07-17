@@ -13,4 +13,7 @@ class ScholarshipController extends Controller
 {
     return view('Scholarship.anso'); // this will contain detailed ANSO info
 }
+public function csc(){
+    return view('Scholarship.csc');
+}
 }
