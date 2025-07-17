@@ -9,7 +9,8 @@
         <div class="bg-white hover:shadow-xl transition rounded-2xl p-6 border border-gray-200">
             <h2 class="text-xl font-semibold mb-4 flex items-center">🇨🇳 China Scholarships</h2>
             <ul class="list-disc ml-5 text-gray-700 space-y-1 text-sm">
-                <li>CSC Scholarship (Chinese Government Scholarship)</li>
+               <li> <a href="{{ route('blog.study-in-china') }}" class="text-blue-600 hover:underline mb-2">Chinese Government Scholarship (CSC)</a>
+               </li>
                 <li>Schwarzman Scholars Program (Tsinghua University – Master’s)</li>
                 <li>Silk Road Scholarship (For Belt & Road countries)</li>
                 <li>Shanghai Government Scholarship</li>
