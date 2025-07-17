@@ -45,13 +45,13 @@
                 <li>
                     <a href="{{ route('scholarships') }}"
                        class="px-5 py-2 rounded-full bg-green-100 text-black font-bold shadow transition-all duration-200 hover:bg-green-300">
-                        Scholarships
+                       Open Scholarships
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('services') }}"
                        class="px-5 py-2 rounded-full bg-green-100 text-black font-semibold shadow transition-all duration-200 hover:bg-green-300">
-                        Service Plans
+                        Countries
                     </a>
                 </li>
                 <li>
