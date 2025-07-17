@@ -1,4 +1,4 @@
- @extends('layouts.app')
+@extends('layouts.app')
 
 @section('content')
 <div class="max-w-5xl mx-auto px-6 py-10 text-gray-800 leading-relaxed">
@@ -9,8 +9,10 @@
         Students studying in Italy will gain valuable knowledge in the classroom, and important cultural competency in one of Europe’s youngest republics. Read on to learn more!
     </p>
 
-<p class="mb-4 text-sm text-gray-500">📅 Jun 17, 2025 &nbsp; | &nbsp; ⏳ 1–2 min read &nbsp; | &nbsp; Category: <span class="font-medium">Study Abroad in Italy</span></p>
-<img src="{{ asset('images/italy1.jpg') }}" alt="Study in Italy" class="w-full rounded-xl shadow mb-6" />
+    <p class="mb-4 text-sm text-gray-500">📅 Jun 17, 2025 &nbsp; | &nbsp; ⏳ 1–2 min read &nbsp; | &nbsp; Category: <span class="font-medium">Study Abroad in Italy</span></p>
+
+    <img src="{{ asset('images/italy1.jpg') }}" alt="Study in Italy" class="w-full rounded-xl shadow mb-6" />
+
     <p class="mb-6">
         Europe’s favorite boot-shaped nation, Italy, is a country of diverse beauty, culture, and history. From the Alps in the North to coastal beaches in the South, choosing to study abroad in Italy gives access to incredible cultural, historical, and touristic experiences.
     </p>
@@ -22,6 +24,32 @@
     <div class="bg-yellow-100 text-yellow-900 p-4 rounded-lg mb-6">
         <strong>Find a program:</strong> Does studying for exams while enjoying the world's best gelato 🍦 sound like a dream? Then check out our programs!
     </div>
+
+    {{-- ✏️ Complete Process to Study in Italy --}}
+    <h2 class="text-2xl font-semibold text-indigo-700 mt-10 mb-4">📌 Step-by-Step Process to Study in Italy</h2>
+    <ol class="list-decimal ml-6 space-y-4 text-gray-700 mb-10">
+        <li>
+            <strong>Research and Find a Suitable Program:</strong> Start by exploring public universities in Italy that offer your preferred course. Check if IELTS or other English proficiency certificates are accepted, or if you qualify for exemptions.
+        </li>
+        <li>
+            <strong>Apply and Secure Admission:</strong> Submit your application as per the university’s deadline. Once accepted, you’ll receive a letter of admission or pre-acceptance.
+        </li>
+        <li>
+            <strong>Pre-Enrollment on Universitaly:</strong> When the Universitaly portal opens (usually around mid-year), submit your details. The university will forward your pre-enrollment summary to your local Italian embassy/consulate.
+        </li>
+        <li>
+            <strong>Start Preparing for Visa:</strong> Begin gathering visa documentation based on the official checklist from your embassy’s website. Ensure you prepare all translations and notarizations.
+        </li>
+        <li>
+            <strong>Choose a Sponsor:</strong> You can either self-sponsor (if employed/self-employed) or use a blood relative as a sponsor. Your sponsor must provide recent bank statements, relationship proof, and income documentation.
+        </li>
+        <li>
+            <strong>Book Your Visa Appointment:</strong> Watch the embassy portal for new appointments and act fast. Delays are common due to high demand.
+        </li>
+        <li>
+            <strong>Apply for Regional Scholarship:</strong> Parallel to visa processing, research regional scholarships like LazioDisco, EDISU Piemonte, or DSU Toscana. These offer accommodation and financial support.
+        </li>
+    </ol>
 
     <p class="mb-6">
         Italy is divided into 20 regions, often grouped into Northern, Central, Southern Italy, and the islands. Each region brings a unique academic and cultural experience.
@@ -41,8 +69,7 @@
 
     <h2 class="text-2xl font-semibold text-indigo-700 mt-10 mb-4">🇮🇹 Italy - Quick Facts & Figures</h2>
     <ul class="list-disc list-inside mb-6 space-y-1">
-        <img src="{{ asset('images/flag.png') }}" alt="Study in Italy" class="w-halfrounded-xl shadow mb-2" />
-    <p class="mb-6">
+        <img src="{{ asset('images/flag.png') }}" alt="Italy Flag" class="w-24 rounded-xl shadow mb-2" />
         <li><strong>Capital:</strong> Rome</li>
         <li><strong>Language:</strong> Italian</li>
         <li><strong>Population:</strong> 59.3 million</li>
@@ -53,9 +80,11 @@
         <li><strong>Calling Code:</strong> +39</li>
         <li><strong>Time Zone:</strong> CET (UTC+1)</li>
     </ul>
-<img src="{{ asset('images/italy.jpg') }}" alt="Study in Italy" class="w-full rounded-xl shadow mb-6" />
-    <p class="mb-6">
+
+    <img src="{{ asset('images/italy.jpg') }}" alt="Study in Italy" class="w-full rounded-xl shadow mb-6" />
+
     <h2 class="text-2xl font-semibold text-indigo-700 mt-10 mb-4">🎓 More About Education in Italy</h2>
+
     <p class="mb-6">
         Italy's universities are among the oldest in Europe and the world — like the University of Bologna (1088), Padua (1222), and Naples (1224).
     </p>
