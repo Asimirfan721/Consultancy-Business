@@ -38,7 +38,7 @@
                         </span>
                         <div>
                             <div class="text-xs text-black">2025-05-19</div>
-                            <a href="/blogs" class="font-semibold text-black hover:underline text-sm">Study Scholarships in Denmark</a>
+                            <a href="/blogs/study-in-italy" class="font-semibold text-black hover:underline text-sm">Study Scholarships in italy</a>
                         </div>
                     </li>
                     <li class="flex items-start gap-2">
@@ -47,7 +47,7 @@
                         </span>
                         <div>
                             <div class="text-xs text-black">2025-05-19</div>
-                            <a href="#" class="font-semibold text-black hover:underline text-sm">Germany Student Visa From Pakistan</a>
+                            <a href="/blogs/study-in-germany" class="font-semibold text-black hover:underline text-sm">Study in Germany</a>
                         </div>
                     </li>
                 </ul>
