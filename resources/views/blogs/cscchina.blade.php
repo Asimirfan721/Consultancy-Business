@@ -55,8 +55,11 @@
 
     <p class="mt-6">Download full list of 279+ Chinese Universities from the <strong>Downloads</strong> section.</p>
 
-    <div class="mt-10 text-center">
-        <a href="/downloads/csc_universities_list.pdf" class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg shadow hover:bg-indigo-700 transition">Download University List (PDF)</a>
-    </div>
+    <a href="{{ asset('downloads/csc_universities_list.pdf') }}" 
+   download 
+   class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg shadow hover:bg-indigo-700 transition">
+   Download University List (PDF)
+</a>
+
 </div>
 @endsection
