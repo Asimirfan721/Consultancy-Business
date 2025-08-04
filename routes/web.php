@@ -38,3 +38,9 @@ Route::get('/blogs/study-in-china', [BlogController::class, 'studyInChina'])->na
 Route::get('/blogs/{slug}', [BlogController::class, 'show'])->name('blog.details');
 
 
+//image uplaod
+Route::get('/scholarshipss', [ScholarshipController::class, 'indexx'])->name('scholarships.index');
+Route::post('/scholarships/upload', [ScholarshipController::class, 'store'])->name('scholarships.upload');
+Route::delete('/scholarships/{image}', [ScholarshipController::class, 'destroy'])->name('scholarships.delete');
+
+
