@@ -12,7 +12,7 @@
                     </div>
                 </div>
                 <p class="text-black text-sm mt-2 leading-relaxed">
-                    Official Representatives of 500+ Universities & Colleges Worldwide.<br>
+                    Official Representatives of 1000+ Universities & Colleges Worldwide.<br>
                     As your trusted study abroad advisor!<br>
                     Tech Consultant was established in 2004 in Karachi, Pakistan.
                 </p>

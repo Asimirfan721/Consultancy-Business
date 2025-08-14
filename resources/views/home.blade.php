@@ -3,7 +3,7 @@
 @section('content')
 <style>
     .hero-bg {
-        background: linear-gradient(rgba(20,40,60,0.7), rgba(20,40,60,0.7)), url('{{ asset('images/book.jpeg') }}') center center / cover no-repeat;
+        background: linear-gradient(rgba(17, 128, 238, 0.7), rgba(20,40,60,0.7)), url('{{ asset('images/book.jpeg') }}') center center / cover no-repeat;
         min-height: 60vh;
         width: 100vw;
         position: relative;
