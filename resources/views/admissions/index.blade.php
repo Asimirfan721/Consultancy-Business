@@ -45,8 +45,13 @@
             </button>
         </div>
 
+        <!-- Contact Message -->
+        <p class="mt-4 text-lg font-semibold text-gray-700">
+            For our services, <a href="{{ route('contact') }}" class="text-blue-600 hover:underline">Contact us</a>
+        </p>
+
         <!-- Download Button -->
-        <a id="downloadBtn" href="" download class="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700">
+        <a id="downloadBtn" href="" download class="mt-3 px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700">
             Download Image
         </a>
     </div>
@@ -78,7 +83,7 @@
         if (currentIndex < images.length - 1) {
             currentIndex++;
         } else {
-            currentIndex = 0; // loop back to first
+            currentIndex = 0;
         }
         updateImage();
     }
@@ -87,7 +92,7 @@
         if (currentIndex > 0) {
             currentIndex--;
         } else {
-            currentIndex = images.length - 1; // loop to last
+            currentIndex = images.length - 1;
         }
         updateImage();
     }
