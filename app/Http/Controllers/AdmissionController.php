@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Admission;
 use Carbon\Carbon;
-use Illuminate\Support\Facades\Storage;
 
 class AdmissionController extends Controller
 {
@@ -31,7 +30,12 @@ class AdmissionController extends Controller
             'deadline' => 'required|date'
         ]);
 
-        $path = $request->file('image')->store('admissions', 'public');
+        // Move image to public/images
+        $fileName = time() . '.' . $request->file('image')->getClientOriginalExtension();
+        $request->file('image')->move(public_path('images/admissions'), $fileName);
+
+        // Save relative path in DB
+        $path = 'images/admissions/' . $fileName;
 
         Admission::create([
             'image' => $path,
@@ -46,6 +50,12 @@ class AdmissionController extends Controller
     public function download($id)
     {
         $admission = Admission::findOrFail($id);
-        return Storage::disk('public')->download($admission->image);
+        $filePath = public_path($admission->image);
+
+        if (file_exists($filePath)) {
+            return response()->download($filePath);
+        }
+
+        return back()->with('error', 'File not found!');
     }
 }
