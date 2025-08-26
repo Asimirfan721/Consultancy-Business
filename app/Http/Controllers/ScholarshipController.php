@@ -4,13 +4,26 @@ namespace App\Http\Controllers;
 use App\Models\Scholarship;
  
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 
 class ScholarshipController extends Controller
 {
-   public function index(){
-    return view('Scholarship.index');
-   }
+  public function index()
+    {
+        // Fetch all images from public/images folder
+        $imageFiles = File::files(public_path('images'));
+
+        // Map file names into array with path + description
+        $images = collect($imageFiles)->map(function ($file) {
+            return [
+                'file_path' => 'images/' . $file->getFilename(),
+                'description' => pathinfo($file->getFilename(), PATHINFO_FILENAME), // use file name as description
+            ];
+        });
+
+        return view('Scholarship.index', compact('images'));
+    }
    public function anso()
 {
     return view('Scholarship.anso'); // this will contain detailed ANSO info

@@ -40,10 +40,12 @@
     <div class="flex overflow-x-auto space-x-6 pb-4">
         @foreach ($images as $image)
         <div class="flex-none w-64 relative">
-            <a href="{{ asset('storage/scholarship_gallery/' . $image->file_path) }}" target="_blank">
-                <img src="{{ asset('storage/scholarship_gallery/' . $image->file_path) }}" alt="{{ $image->description }}" class="rounded-xl shadow-md hover:scale-105 transition transform duration-200 cursor-pointer">
+            <a href="{{ asset($image['file_path']) }}" target="_blank">
+                <img src="{{ asset($image['file_path']) }}" 
+                     alt="{{ $image['description'] }}" 
+                     class="rounded-xl shadow-md hover:scale-105 transition transform duration-200 cursor-pointer">
             </a>
-            <p class="text-sm text-center mt-2 text-gray-600">{{ $image->description }}</p>
+            <p class="text-sm text-center mt-2 text-gray-600">{{ $image['description'] }}</p>
         </div>
         @endforeach
     </div>

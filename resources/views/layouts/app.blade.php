@@ -45,7 +45,7 @@
                 <li>
                     <a href="{{ route('scholarships') }}"
                        class="px-5 py-2 rounded-full bg-green-100 text-black font-bold shadow transition-all duration-200 hover:bg-green-300">
-                      Major Scholarships
+                       Major Scholarships
                     </a>
                 </li>
                 <li>
