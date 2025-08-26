@@ -55,9 +55,9 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('documents') }}"
+                    <a href="{{ route('admissions.index') }}"
                        class="px-5 py-2 rounded-full bg-green-100 text-black font-semibold shadow transition-all duration-200 hover:bg-green-300">
-                        MS & PhDs
+                        Mandatory Documents
                     </a>
                 </li>
             

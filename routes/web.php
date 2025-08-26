@@ -5,6 +5,7 @@ use App\Http\Controllers\ScholarshipControllerOne;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\AdmissionController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -39,12 +40,3 @@ Route::get('/blogs/study-in-china', [BlogController::class, 'studyInChina'])->na
 Route::get('/blogs/{slug}', [BlogController::class, 'show'])->name('blog.details');
 
 
-//image uplaod
-Route::get('/scholarshipss', [ScholarshipController::class, 'indexx'])->name('scholarships.index');
-Route::post('/scholarships/upload', [ScholarshipController::class, 'store'])->name('scholarships.upload');
-Route::delete('/scholarships/{image}', [ScholarshipController::class, 'destroy'])->name('scholarships.delete');
-
-
-//Scholarship One
-Route::get('/scholarships/upload', [ScholarshipControllerOne::class, 'create'])->name('scholarships.upload');
-Route::post('/scholarships/upload', [ScholarshipControllerOne::class, 'store'])->name('scholarships.store');
