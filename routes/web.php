@@ -1,6 +1,7 @@
 <?php
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ScholarshipController;
+use App\Http\Controllers\ScholarshipControllerOne;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
@@ -44,3 +45,6 @@ Route::post('/scholarships/upload', [ScholarshipController::class, 'store'])->na
 Route::delete('/scholarships/{image}', [ScholarshipController::class, 'destroy'])->name('scholarships.delete');
 
 
+//Scholarship One
+Route::get('/scholarships/upload', [ScholarshipControllerOne::class, 'create'])->name('scholarships.upload');
+Route::post('/scholarships/upload', [ScholarshipControllerOne::class, 'store'])->name('scholarships.store');

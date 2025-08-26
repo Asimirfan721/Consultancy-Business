@@ -1,45 +1,51 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="py-12 max-w-5xl mx-auto px-4 bg-gray-50 min-h-screen">
+<section class="py-12 max-w-7xl mx-auto px-4 bg-gray-50 min-h-screen">
     <h2 class="text-4xl font-extrabold text-center mb-10 text-gray-800">
-        Mandatory Documents
+        <!-- Optionally keep or remove heading -->
+        Open Admissions and Scholarships for MS & PhDs
     </h2>
 
-    <!-- Admission Documents -->
-    <div class="bg-white rounded-2xl shadow-md border-l-4 border-blue-600 p-6 mb-10">
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">📘 For Admission</h3>
-        <p class="text-gray-700 mb-4">
-            While admission requirements can vary by university and country, the following documents are typically required:
-        </p>
-        <ul class="list-disc pl-6 space-y-2 text-gray-700">
-            <li>Passport (valid)</li>
-            <li>Degree Certificate(s)</li>
-            <li>Academic Transcript(s)</li>
-            <li>Letter of Motivation / Statement of Purpose</li>
-            <li>Two Letters of Recommendation</li>
-            <li>Updated CV / Resume</li>
-            <li>Proof of English Proficiency (IELTS, TOEFL, Duolingo, etc. if required)</li>
-        </ul>
+    <div class="overflow-x-auto whitespace-nowrap flex gap-6 p-4 bg-white rounded-lg shadow">
+        @foreach ($scholarships as $scholarship)
+            <div class="inline-block w-72 shrink-0 relative">
+                <img src="{{ asset('storage/' . $scholarship->image_path) }}"
+                     alt="Scholarship Image"
+                     class="rounded-lg cursor-pointer object-cover h-48 w-full"
+                     onclick="openModal('{{ asset('storage/' . $scholarship->image_path) }}', '{{ $scholarship->description }}')">
+                
+                <div class="mt-2 text-gray-700 text-sm">
+                    <p><strong>Deadline:</strong> {{ \Carbon\Carbon::parse($scholarship->deadline)->format('d M, Y') }}</p>
+                    <p>{{ $scholarship->description }}</p>
+                </div>
+            </div>
+        @endforeach
     </div>
 
-    <!-- Visa Documents -->
-    <div class="bg-white rounded-2xl shadow-md border-l-4 border-blue-400 p-6">
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">🛂 For Visa</h3>
-        <p class="text-gray-700 mb-4">
-            Visa requirements depend on the country and embassy. Usually, the embassy provides an official checklist, but commonly required documents include:
-        </p>
-        <ul class="list-disc pl-6 space-y-2 text-gray-700">
-            <li>University Acceptance Letter</li>
-            <li>Completed Visa Application Form</li>
-            <li>Copy of National Identity Card (NIC)</li>
-            <li>All Educational Documents</li>
-            <li>Documents Apostilled (if required)</li>
-            <li>Attestation from Ministry of Foreign Affairs (MOFA)</li>
-            <li>Bank Statement / Financial Proof</li>
-            <li>Passport-size Photographs (as per embassy format)</li>
-            <li>Proof of accommodation & travel (may vary)</li>
-        </ul>
+    <!-- Modal -->
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center hidden z-50">
+        <div class="bg-white rounded-lg p-4 relative max-w-3xl w-full">
+            <button class="absolute top-2 right-2 text-gray-500 hover:text-red-600 text-xl" onclick="closeModal()">×</button>
+            <img id="modalImage" src="" class="w-full max-h-[70vh] object-contain" alt="Full View">
+            <p id="modalDesc" class="mt-4 text-gray-700"></p>
+            <a id="downloadBtn" href="#" download class="mt-4 inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded shadow">
+                Download Image
+            </a>
+        </div>
     </div>
 </section>
+
+<script>
+    function openModal(imageUrl, description) {
+        document.getElementById('modalImage').src = imageUrl;
+        document.getElementById('modalDesc').innerText = description;
+        document.getElementById('downloadBtn').href = imageUrl;
+        document.getElementById('imageModal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+        document.getElementById('imageModal').classList.add('hidden');
+    }
+</script>
 @endsection

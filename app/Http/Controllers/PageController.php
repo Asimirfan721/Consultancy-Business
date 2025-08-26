@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Mail;
+use App\Models\Scholarship;
 
 
 use Illuminate\Http\Request;
@@ -11,9 +12,11 @@ class PageController extends Controller
     public function services(){
         return view('services');
     }
-    public function documents(){
-        return view('documents');
-    }
+   public function documents()
+{
+    $scholarships = Scholarship::all(); // Or paginate(), or filter as needed
+    return view('documents', compact('scholarships'));
+}
      public function show()
     {
         return view('contact');
