@@ -39,4 +39,8 @@ Route::get('/blogs/study-in-germany', [BlogController::class, 'studyInGermany'])
 Route::get('/blogs/study-in-china', [BlogController::class, 'studyInChina'])->name('blog.study-in-china');
 Route::get('/blogs/{slug}', [BlogController::class, 'show'])->name('blog.details');
 
-
+//admissions
+Route::get('/admissions', [AdmissionController::class, 'index'])->name('admissions.index');
+Route::get('/admissions/create', [AdmissionController::class, 'create'])->name('admissions.create');
+Route::post('/admissions', [AdmissionController::class, 'store'])->name('admissions.store');
+Route::get('/admissions/{id}/download', [AdmissionController::class, 'download'])->name('admissions.download');
