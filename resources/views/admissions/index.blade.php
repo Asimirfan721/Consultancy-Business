@@ -2,28 +2,26 @@
 
 @section('content')
 <section class="py-12 max-w-6xl mx-auto px-4 bg-gray-50 min-h-screen">
-    <h2 class="text-3xl font-bold text-center mb-8">Open Admissions & Scholarships</h2>
-
-    <div class="flex overflow-x-auto space-x-6 p-4 bg-white shadow rounded">
-        @forelse($admissions as $admission)
-            <div class="flex-shrink-0 w-64 bg-gray-100 rounded-lg shadow cursor-pointer"
-                 onclick="openModal({{ $loop->index }})">
-                 
-                <img src="{{ asset($admission->image) }}" class="w-full h-40 object-cover rounded-t-lg">
-
-                <div class="p-3">
-                    <p class="text-sm text-gray-600">{{ $admission->description }}</p>
-                    <p class="text-xs text-red-500 mt-2">
-                        Deadline: {{ \Carbon\Carbon::parse($admission->deadline)->format('d M, Y') }}
-                    </p>
+    <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Open Admissions & Scholarships</h2>
+    <h3 class="text-1xl font-bold text-center mb-8 text-gray-800">Whose deadline passed those will be deleted from here Automatically</h3>
+    <div class="h-[70vh] overflow-y-auto bg-white shadow rounded-2xl p-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            @forelse($admissions as $admission)
+                <div class="bg-gray-100 rounded-xl shadow hover:shadow-lg transition cursor-pointer flex flex-col"
+                     onclick="openModal({{ $loop->index }})">
+                    <img src="{{ asset($admission->image) }}" class="w-full h-40 object-cover rounded-t-xl">
+                    <div class="flex-1 p-4 flex flex-col justify-between">
+                        <p class="text-gray-700 mb-2 font-medium">{{ $admission->description }}</p>
+                        <p class="text-base font-bold text-red-600">
+                            Deadline: <span class="font-semibold">{{ \Carbon\Carbon::parse($admission->deadline)->format('d M, Y') }}</span>
+                        </p>
+                    </div>
                 </div>
-            </div>
-        @empty
-            <p class="text-gray-500">No active admissions available.</p>
-        @endforelse
+            @empty
+                <p class="text-gray-500 col-span-4">No active admissions available.</p>
+            @endforelse
+        </div>
     </div>
-</section>
-
 <!-- Modal -->
 <div id="imageModal" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
     <div class="bg-white p-6 rounded-lg shadow-lg relative max-w-5xl w-full flex flex-col items-center">
