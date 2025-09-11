@@ -40,10 +40,10 @@
         <!-- Right: Text -->
         <div class="md:w-2/3 w-full">
             <h1 class="text-4xl md:text-5xl font-extrabold text-black leading-tight mb-6">
-                Welcome to <span class="font-extrabold text-black">TechConsultancy</span>
+                Welcome to <span class="font-extrabold text-black">Dream Destination</span>
             </h1>
             <p class="text-black text-lg md:text-xl max-w-3xl mb-8">
-                Your trusted partner in fulfilling study-abroad dreams. We assist you every step of the way — from selecting universities to building your visa file.
+               You can Find here Open and Active Scholarships, this Website will help you find your desired programme.
             </p>
             <!-- Social Media Icons -->
             <div class="flex flex-wrap gap-4 mb-8">
@@ -84,7 +84,7 @@
 
 <!-- Countries Section -->
 <section id="countries" class="mt-8 bg-[#F3FFE3] py-14 rounded-2xl shadow-lg">
-    <h2 class="text-4xl font-bold mb-10 text-center text-green-700 drop-shadow">Popular Countries We Guide For</h2>
+    <h2 class="text-4xl font-bold mb-10 text-center text-green-700 drop-shadow">Popular Countries</h2>
     <div class="grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4">
         <!-- Denmark Card -->
         <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-green-400 hover:scale-105 hover:shadow-xl transition">
@@ -118,29 +118,61 @@
         <div class="bg-white rounded-lg shadow border border-green-200 hover:shadow-lg transition">
             <button @click="open === 1 ? open = null : open = 1"
                 class="w-full flex justify-between items-center px-6 py-4 text-left focus:outline-none">
-                <span class="text-lg font-semibold text-black">1. What services does TechConsultancy offer?</span>
+                <span class="text-lg font-semibold text-black">1. How to Improve Your Resume? </span>
                 <span>
                     <svg x-show="open !== 1" class="w-6 h-6 text-green-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v8m-4-4h8" /></svg>
                 </span>
             </button>
             <div x-show="open === 1" class="px-6 pb-4 text-gray-700">
-                TechConsultancy provides a range of services including university and program selection, application assistance, visa and immigration support, scholarship guidance, career counseling, and 24/7 support. We also offer post-arrival assistance to help students settle into their new environment.
+                1. English Proficiency Test: Attempt IELTS, TOEFL, GRE, or PTE as required by your program. <br>
+
+2. Publications/Thesis: Include any published work in your CV. If none are published yet, add the title of your thesis and mention “Under Review” in the description.
+<br>
+3. Relevant Certifications: Highlight courses with certifications (from Coursera, Udemy, etc.) that are directly related to your program.
+<br>
+4. Extracurricular Achievements: Attach certificates of extracurricular activities to showcase additional skills.
+<br>
+5. Recommenders: Provide details of your recommenders (e.g., Professor, Associate Professor)
             </div>
         </div>
         <!-- FAQ 2 -->
         <div class="bg-white rounded-lg shadow border border-green-200 hover:shadow-lg transition">
             <button @click="open === 2 ? open = null : open = 2"
                 class="w-full flex justify-between items-center px-6 py-4 text-left focus:outline-none">
-                <span class="text-lg font-semibold text-black">2. How does the AI-powered Course Finder work?</span>
+                <span class="text-lg font-semibold text-black">2.How to Get Free Certificates From Coursera with certifications?</span>
                 <span>
                     <svg x-show="open !== 2" class="w-6 h-6 text-green-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v8m-4-4h8" /></svg>
                 </span>
             </button>
             <div x-show="open === 2" class="px-6 pb-4 text-gray-700">
-                Our AI-powered Course Finder analyzes your preferences and academic background to recommend the best universities and courses tailored for you, saving you months of manual research.
+                Step-1 Register on Coursera.<br>
+                Step-2 Select the desired Course.<br>
+                Step-3 View the course, you will find the option Scholarship Aid.<br>
+                Step-4 A form will open, asking some questions, answer those questions and select your level and complete the form.<br>
+                Step-5 Your application will be submitted, After 15 days your course will be free and accessible to you with a few $ Maybe 2 or 3 Dollars you can download the Certificate AS well. <br>
             </div>
         </div>
         <!-- Add more FAQs as needed -->
+         <div class="bg-white rounded-lg shadow border border-green-200 hover:shadow-lg transition">
+            <button @click="open === 2 ? open = null : open = 2"
+                class="w-full flex justify-between items-center px-6 py-4 text-left focus:outline-none">
+                <span class="text-lg font-semibold text-black">3.How to write & publish your first ever Research paper?</span>
+                <span>
+                    <svg x-show="open !== 2" class="w-6 h-6 text-green-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v8m-4-4h8" /></svg>
+                </span>
+            </button>
+            <div x-show="open === 2" class="px-6 pb-4 text-gray-700">
+                Step-1 Iam sure you have completed your thesis.<br>
+                Step-2 Convert your thesis into IEEE format (Download from Google).<br>
+                Step-3 Find some National/International conferences in your country.<br>
+                Step-4 Improve the Paper as per given Instruction from reviewer & again submit in the conference.<br>
+                Step-5 Hopefully, after some reviews your paper will be accepted. <br>
+                Step-6 You will recive conference date and time via acceptance email. <br>
+                step-7 Prepeare a PPT and present your paper at the conference (Physically I would recommend, it will boost your confidence).<br>
+                Step-8 Conference will automatically Update your paper Into the respective Journal. <br>
+                    DONE, Here you go !! <br>
+            </div>
+        </div>
     </div>
 </section>
 
