@@ -46,9 +46,9 @@
         </div>
 
         <!-- Contact Message -->
-        <p class="mt-4 text-lg font-semibold text-gray-700">
+        {{-- <p class="mt-4 text-lg font-semibold text-gray-700">
             For our services, <a href="{{ route('contact') }}" class="text-blue-600 hover:underline">Contact us</a>
-        </p>
+        </p> --}}
 
         <!-- Download Button -->
         <a id="downloadBtn" href="" download class="mt-3 px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700">
