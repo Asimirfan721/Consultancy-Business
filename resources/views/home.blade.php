@@ -169,7 +169,7 @@
                 Step-5 Hopefully, after some reviews your paper will be accepted. <br>
                 Step-6 You will recive conference date and time via acceptance email. <br>
                 step-7 Prepeare a PPT and present your paper at the conference (Physically I would recommend, it will boost your confidence).<br>
-                Step-8 Conference will automatically Update your paper Into the respective Journal. <br>
+                Step-8 Conference will publish your paper Into the respective Journal. <br>
                     DONE, Here you go !! <br>
             </div>
         </div>

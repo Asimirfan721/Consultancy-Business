@@ -7,14 +7,14 @@
                 <div class="flex items-center gap-2 mb-2">
                     <img src="/images/Tech Consultancy.jpg" alt="Tech Consultant" class="h-10 w-auto" />
                     <div>
-                        <div class="text-xl font-bold text-red-700 leading-tight">Tech CONSULTANT</div>
+                        <div class="text-xl font-bold text-red-700 leading-tight">Dream Destination</div>
                         <div class="text-xs font-bold text-red-700">21 YEARS OF SHAPING CAREERS</div>
                     </div>
                 </div>
                 <p class="text-black text-sm mt-2 leading-relaxed">
                     Official Representatives of 1000+ Universities & Colleges Worldwide.<br>
-                    As your trusted study abroad advisor!<br>
-                    Tech Consultant was established in 2004 in Karachi, Pakistan.
+                    <br>
+                   Karachi, Pakistan.
                 </p>
             </div>
 
@@ -61,13 +61,13 @@
                         <span class="inline-flex items-center justify-center w-8 h-8 rounded bg-white border border-gray-300 text-red-600">
                             <i class="far fa-envelope"></i>
                         </span>
-                        <span class="text-black text-sm">study@Techconsultant.com</span>
+                        <span class="text-black text-sm">rajputasim735@gmail.com</span>
                     </li>
                     <li class="flex items-center gap-2">
                         <span class="inline-flex items-center justify-center w-8 h-8 rounded bg-white border border-gray-300 text-red-600">
                             <i class="fas fa-phone"></i>
                         </span>
-                        <span class="text-black text-sm">(92) 345 2066 100</span>
+                        <span class="text-black text-sm">(92)3201378853</span>
                     </li>
                 </ul>
             </div>
@@ -85,7 +85,7 @@
         <!-- Bottom Bar -->
         <div class="flex flex-col md:flex-row justify-between items-center border-t border-gray-200 pt-4 text-sm text-black">
             <div class="mb-2 md:mb-0">
-                © Tech Consultant 2025 | All Rights Reserved
+                © dream Destination 2025 | All Rights Reserved
             </div>
             <div class="flex gap-6">
                 <a href="#" class="hover:underline">Terms & Conditions</a>
