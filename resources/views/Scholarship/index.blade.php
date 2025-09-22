@@ -17,7 +17,7 @@
             </p>
             <a href="{{ route('Scholarship.anso') }}" class="text-indigo-600 hover:underline font-medium">Read More →</a>
         </div>
-
+        
         <!-- CSC Scholarship Card -->
         <div class="bg-white rounded-2xl shadow-md border p-6 hover:shadow-lg transition duration-300">
             <h2 class="text-2xl font-semibold text-blue-700 mb-2">CSC Scholarship - China</h2>
