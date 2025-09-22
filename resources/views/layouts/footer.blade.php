@@ -8,7 +8,7 @@
                     <img src="/images/Tech Consultancy.jpg" alt="Tech Consultant" class="h-10 w-auto" />
                     <div>
                         <div class="text-xl font-bold text-red-700 leading-tight">Dream Destination</div>
-                        <div class="text-xs font-bold text-red-700">21 YEARS OF SHAPING CAREERS</div>
+                        <div class="text-xs font-bold text-red-700">SHAPING CAREERS</div>
                     </div>
                 </div>
                 <p class="text-black text-sm mt-2 leading-relaxed">

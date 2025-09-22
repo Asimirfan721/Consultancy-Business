@@ -34,7 +34,7 @@
     </div>
 </div>
 <!-- Image Gallery -->
-<div class="mt-16">
+{{-- <div class="mt-16">
     <h2 class="text-3xl font-bold text-indigo-700 mb-6">Scholarship Visual Gallery</h2>
 
     <div class="flex overflow-x-auto space-x-6 pb-4">
@@ -49,6 +49,6 @@
         </div>
         @endforeach
     </div>
-</div>
+</div> --}}
 
 @endsection
