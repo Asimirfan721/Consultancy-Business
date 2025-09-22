@@ -139,7 +139,7 @@
         <div class="bg-white rounded-lg shadow border border-green-200 hover:shadow-lg transition">
             <button @click="open === 2 ? open = null : open = 2"
                 class="w-full flex justify-between items-center px-6 py-4 text-left focus:outline-none">
-                <span class="text-lg font-semibold text-black">2.How to Get Free Certificates From Coursera with certifications?</span>
+                <span class="text-lg font-semibold text-black">2.How to Get Free Certificates From Coursera?</span>
                 <span>
                     <svg x-show="open !== 2" class="w-6 h-6 text-green-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v8m-4-4h8" /></svg>
                 </span>
