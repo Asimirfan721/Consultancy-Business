@@ -4,34 +4,50 @@
 <section class="py-12 w-full px-0 bg-gray-50 min-h-screen">
     <h2 class="text-4xl font-extrabold text-center mb-10 text-gray-800 tracking-tight">Open Admissions & Scholarships</h2>
     <h3 class="text-lg font-medium text-center mb-10 text-gray-600">Admissions with passed deadlines are automatically removed.</h3>
-    <div class="bg-white shadow-xl rounded-2xl mx-4 lg:mx-12 xl:mx-32 p-6">
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
- @forelse($admissions as $admission)
-    <div class="bg-gray-100 rounded-2xl shadow hover:shadow-2xl transition cursor-pointer flex flex-col relative group">
-        <img src="{{ asset($admission->image) }}" class="w-full h-48 object-cover rounded-t-2xl" onclick="openModal({{ $loop->index }})">
-        <div class="flex-1 p-4 flex flex-col justify-between">
-            <p class="text-gray-800 mb-2 font-medium">{{ $admission->description }}</p>
-            <p class="text-base font-bold text-red-600 mb-3">
-                Deadline: <span class="font-semibold">{{ \Carbon\Carbon::parse($admission->deadline)->format('d M, Y') }}</span>
-            </p>
-            <div class="flex gap-2">
-                <button onclick="copyLink('{{ asset($admission->image) }}', this)" type="button"
-                    class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-lg text-sm font-semibold transition">
-                    Copy Link
-                </button>
-                <button onclick="openModal({{ $loop->index }})" type="button"
-                    class="bg-gray-300 hover:bg-gray-400 text-gray-800 px-3 py-1 rounded-lg text-sm font-semibold transition">
-                    View
-                </button>
+  <div class="bg-white shadow-xl rounded-2xl mx-4 lg:mx-12 xl:mx-32 p-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        @forelse($admissions as $admission)
+            @php
+                $desc = $admission->description;
+                $shortDesc = strlen($desc) > 80 ? mb_substr($desc, 0, 80) . '...' : $desc;
+                $isLong = strlen($desc) > 80;
+            @endphp
+            <div class="bg-gray-100 rounded-2xl shadow hover:shadow-2xl transition cursor-pointer flex flex-col relative group w-full">
+                <img src="{{ asset($admission->image) }}" class="w-full h-64 object-cover rounded-t-2xl" onclick="openModal({{ $loop->index }})">
+                <div class="flex-1 p-6 flex flex-col justify-between">
+                    <p class="text-gray-800 mb-2 font-medium description-preview" id="desc-{{ $loop->index }}">
+                        {{ $shortDesc }}
+                        @if($isLong)
+                            <span class="text-blue-600 cursor-pointer ml-1 see-more" onclick="showFullDesc({{ $loop->index }}, @json($desc))">See more</span>
+                        @endif
+                    </p>
+                    <p class="text-base font-bold text-red-600 mb-3">
+                        Deadline: <span class="font-semibold">{{ \Carbon\Carbon::parse($admission->deadline)->format('d M, Y') }}</span>
+                    </p>
+                    <div class="flex gap-2">
+                        <button onclick="copyLink('{{ asset($admission->image) }}', this)" type="button"
+                            class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-lg text-sm font-semibold transition">
+                            Copy Link
+                        </button>
+                        <button onclick="openModal({{ $loop->index }})" type="button"
+                            class="bg-gray-300 hover:bg-gray-400 text-gray-800 px-3 py-1 rounded-lg text-sm font-semibold transition">
+                            View
+                        </button>
+                    </div>
+                    <span class="copy-feedback absolute right-4 bottom-4 text-xs text-green-600 font-semibold opacity-0 transition-opacity duration-300"></span>
+                </div>
             </div>
-            <span class="copy-feedback absolute right-4 bottom-4 text-xs text-green-600 font-semibold opacity-0 transition-opacity duration-300"></span>
-        </div>
+        @empty
+            <p class="text-gray-500 col-span-3">No active admissions available.</p>
+        @endforelse
     </div>
-@empty
-    <p class="text-gray-500 col-span-4">No active admissions available.</p>
-@endforelse
-        </div>
-    </div>
+</div>
+<script>
+function showFullDesc(idx, fullText) {
+    const descElem = document.getElementById('desc-' + idx);
+    descElem.innerHTML = fullText;
+}
+</script>
 </section>
 <!-- Modal -->
 <div id="imageModal" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
