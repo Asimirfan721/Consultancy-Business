@@ -42,10 +42,16 @@
                         Home
                     </a>
                 </li>
+                   <li>
+                    <a href="{{ route('admissions.index') }}"
+                       class="px-5 py-2 rounded-full bg-green-100 text-black font-bold shadow transition-all duration-200 hover:bg-green-300">
+                       Major Scholarships
+                    </a>
+                </li>
                 <li>
                     <a href="{{ route('scholarships') }}"
                        class="px-5 py-2 rounded-full bg-green-100 text-black font-bold shadow transition-all duration-200 hover:bg-green-300">
-                       Major Scholarships
+                       Open Scholarships
                     </a>
                 </li>
                 <li>
@@ -54,19 +60,14 @@
                         Countries
                     </a>
                 </li>
-                <li>
-                    <a href="{{ route('admissions.index') }}"
-                       class="px-5 py-2 rounded-full bg-green-100 text-black font-semibold shadow transition-all duration-200 hover:bg-green-300">
-                       Open Scholarships
-                    </a>
-                </li>
+             
             
                      <li><a href="{{ url('/blogs') }}" class="px-5 py-2 rounded-full bg-green-100 text-black font-semibold shadow transition-all duration-200 hover:bg-green-300">Blogs</a></li>
                 
                 <li>
                     <a href="{{ route('contact') }}"
                        class="px-5 py-2 rounded-full bg-green-100 text-black font-semibold shadow transition-all duration-200 hover:bg-green-300">
-                        Contact Us & Reviews
+                        Contact Us
                     </a>
                 </li>
             </ul>

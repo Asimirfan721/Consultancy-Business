@@ -124,25 +124,7 @@
             <h3 class="text-2xl font-bold mb-6 text-center text-black">What Our Clients Say</h3>
             <div class="flex flex-col md:flex-row gap-8 justify-center items-stretch">
                 <!-- Review 1 -->
-                <div class="review-card flex-1 bg-white rounded-2xl shadow-lg p-6 transition-transform duration-300 border-t-4 border-green-200">
-                    <div class="flex items-center gap-3 mb-2">
-                        <span class="text-lg font-semibold text-black">Ayesha Khan</span>
-                        <span class="text-sm text-gray-400">★ ★ ★ ★ ★</span>
-                    </div>
-                    <p class="text-black italic">
-                        "Their service is awesome! The team is truly expert in the field and guided me at every step. Highly recommended for anyone dreaming to study abroad."
-                    </p>
-                </div>
-                <!-- Review 2 -->
-                <div class="review-card flex-1 bg-white rounded-2xl shadow-lg p-6 transition-transform duration-300 border-t-4 border-green-400">
-                    <div class="flex items-center gap-3 mb-2">
-                        <span class="text-lg font-semibold text-black">Ali Raza</span>
-                        <span class="text-sm text-gray-400">★ ★ ★ ★ ★</span>
-                    </div>
-                    <p class="text-black italic">
-                        "I am so happy with TechConsultancy! They are very good at what they do and made my application process smooth and stress-free. Thank you for your dedication!"
-                    </p>
-                </div>
+                 
             </div>
         </div>
     </div>

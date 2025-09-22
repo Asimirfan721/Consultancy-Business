@@ -43,7 +43,7 @@
                 Welcome to <span class="font-extrabold text-black">Dream Destination</span>
             </h1>
             <p class="text-black text-lg md:text-xl max-w-3xl mb-8">
-               You can Find here Open and Active Scholarships, this Website will help you find your desired programme.
+               You can Find here Open and Active Scholarships, this Website will help you find your desired programme for Free.
             </p>
             <!-- Social Media Icons -->
             <div class="flex flex-wrap gap-4 mb-8">
