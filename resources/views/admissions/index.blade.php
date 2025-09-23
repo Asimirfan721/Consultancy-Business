@@ -15,12 +15,9 @@
             <div class="bg-gray-100 rounded-2xl shadow hover:shadow-2xl transition cursor-pointer flex flex-col relative group w-full">
                 <img src="{{ asset($admission->image) }}" class="w-full h-64 object-cover rounded-t-2xl" onclick="openModal({{ $loop->index }})">
                 <div class="flex-1 p-6 flex flex-col justify-between">
-                    <p class="text-gray-800 mb-2 font-medium description-preview" id="desc-{{ $loop->index }}">
-                        {{ $shortDesc }}
-                        @if($isLong)
-                            <span class="text-blue-600 cursor-pointer ml-1 see-more" onclick="showFullDesc({{ $loop->index }}, @json($desc))">See more</span>
-                        @endif
-                    </p>
+                  <p class="text-gray-800 mb-2 font-medium description-preview">
+    {{ $admission->description }}
+</p>
                     <p class="text-base font-bold text-red-600 mb-3">
                         Deadline: <span class="font-semibold">{{ \Carbon\Carbon::parse($admission->deadline)->format('d M, Y') }}</span>
                     </p>
@@ -48,6 +45,7 @@ function showFullDesc(idx, fullText) {
     descElem.innerHTML = fullText;
 }
 </script>
+
 </section>
 <!-- Modal -->
 <div id="imageModal" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
@@ -127,4 +125,5 @@ function copyLink(link, btn) {
         }
     }
 </script>
+
 @endsection

@@ -42,7 +42,7 @@
             <a href="tel:03052135624"
                class="contact-btn inline-flex items-center gap-2 px-5 py-2 rounded-full bg-green-100 text-black font-semibold shadow hover:bg-green-200 transition w-auto">
                 <i class="fas fa-phone text-green-600"></i>
-                0305 2135624
+                0305-2135624
             </a>
             <a href="mailto:rajputasim735@gmail.com"
                class="contact-btn inline-flex items-center gap-2 px-5 py-2 rounded-full bg-green-100 text-black font-semibold shadow hover:bg-green-200 transition w-auto">
