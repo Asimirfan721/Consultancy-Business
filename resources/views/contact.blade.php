@@ -36,7 +36,7 @@
     <div class="text-center w-full max-w-2xl mx-auto px-4">
         <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4 drop-shadow-lg">Contact Us</h2>
         <p class="text-lg md:text-xl text-gray-200 mb-8 font-medium drop-shadow">
-            Reach out to TechConsultancy for expert guidance and support on your study abroad journey.
+            Reach out to US for expert guidance and support on your study abroad journey for Free.
         </p>
         <div class="flex flex-wrap gap-4 justify-center mb-2">
             <a href="tel:03052135624"

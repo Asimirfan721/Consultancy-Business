@@ -5,7 +5,7 @@
             <!-- Logo & About -->
             <div class="flex-1 min-w-[220px]">
                 <div class="flex items-center gap-2 mb-2">
-                    <img src="/images/Tech Consultancy.jpg" alt="Tech Consultant" class="h-10 w-auto" />
+                    <img src="/images/Dream Destination.jpg" alt="Tech Consultant" class="h-10 w-auto" />
                     <div>
                         <div class="text-xl font-bold text-red-700 leading-tight">Dream Destination</div>
                         <div class="text-xs font-bold text-red-700">SHAPING CAREERS</div>
