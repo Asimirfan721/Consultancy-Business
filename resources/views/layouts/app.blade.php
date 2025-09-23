@@ -32,7 +32,7 @@
     <nav class="custom-header-bg shadow-lg">
         <div class="container mx-auto px-4 h-24 flex justify-between items-center">
             <div class="select-none">
-                <img src="{{ asset('images/Tech Consultancy.jpg') }}" alt="TechConsultancy Logo"
+                <img src="{{ asset('images/Dream Destination.jpg') }}" alt="TechConsultancy Logo"
                      class="h-16 md:h-20 w-auto object-contain transition-all duration-300">
             </div>
             <ul class="flex space-x-4">
