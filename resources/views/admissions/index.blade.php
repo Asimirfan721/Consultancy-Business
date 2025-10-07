@@ -24,7 +24,7 @@
                     <div class="flex gap-2">
                         <button onclick="copyLink('{{ asset($admission->image) }}', this)" type="button"
                             class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-lg text-sm font-semibold transition">
-                            Copy Link
+                            Copy 
                         </button>
                         <button onclick="openModal({{ $loop->index }})" type="button"
                             class="bg-gray-300 hover:bg-gray-400 text-gray-800 px-3 py-1 rounded-lg text-sm font-semibold transition">
@@ -52,21 +52,53 @@ function showFullDesc(idx, fullText) {
     <div class="bg-white p-6 rounded-lg shadow-lg relative max-w-5xl w-full flex flex-col items-center">
         <!-- Close Button -->
         <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-700 text-3xl font-bold">&times;</button>
+
         <!-- Image Viewer -->
-        <div class="relative w-full flex items-center justify-center">
-            <button onclick="prevImage()" class="absolute left-0 text-white text-4xl px-4 py-2 bg-black bg-opacity-40 hover:bg-opacity-70 rounded-full">
+        <div class="relative w-full flex items-center justify-center overflow-hidden">
+            <button onclick="prevImage()" class="absolute left-0 text-white text-4xl px-4 py-2 bg-black bg-opacity-40 hover:bg-opacity-70 rounded-full z-10">
                 &#10094;
             </button>
-            <img id="modalImage" src="" class="max-h-[80vh] max-w-[90%] object-contain rounded shadow-lg mx-auto">
-            <button onclick="nextImage()" class="absolute right-0 text-white text-4xl px-4 py-2 bg-black bg-opacity-40 hover:bg-opacity-70 rounded-full">
+            
+            <img id="modalImage"
+                 src=""
+                 class="max-h-[80vh] max-w-[90%] object-contain rounded shadow-lg mx-auto cursor-zoom-in transition-transform duration-150"
+                 onwheel="zoomImage(event)">
+            
+            <button onclick="nextImage()" class="absolute right-0 text-white text-4xl px-4 py-2 bg-black bg-opacity-40 hover:bg-opacity-70 rounded-full z-10">
                 &#10095;
             </button>
         </div>
+
         <a id="downloadBtn" href="" download class="mt-3 px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700">
             Download Image
         </a>
     </div>
 </div>
+
+<script>
+let zoomScale = 1;
+
+function zoomImage(event) {
+    event.preventDefault();
+    const image = document.getElementById('modalImage');
+
+    // Scroll up -> zoom in, Scroll down -> zoom out
+    if (event.deltaY < 0) zoomScale += 0.1;
+    else zoomScale = Math.max(1, zoomScale - 0.1);
+
+    image.style.transform = `scale(${zoomScale})`;
+    image.style.cursor = zoomScale > 1 ? 'zoom-out' : 'zoom-in';
+}
+
+function closeModal() {
+    const modal = document.getElementById('imageModal');
+    const image = document.getElementById('modalImage');
+    modal.classList.add('hidden');
+    zoomScale = 1;
+    image.style.transform = 'scale(1)';
+}
+</script>
+    
 <script>
 function copyLink(link, btn) {
     navigator.clipboard.writeText(link).then(function() {
